@@ -33,6 +33,7 @@
   .st-new{background:rgba(245,158,11,.15);color:var(--amber);border:1px solid rgba(245,158,11,.4)}
   .st-watching{background:rgba(147,161,189,.12);color:var(--muted);border:1px solid var(--line)}
   .st-reported{background:rgba(147,161,189,.08);color:var(--muted);border:1px solid var(--line)}
+  .jev{background:rgba(168,85,247,.14);color:#c084fc;border:1px solid rgba(168,85,247,.4)}
   .scorebar{height:6px;background:var(--line);border-radius:99px;margin:10px 0 4px;overflow:hidden}
   .scorebar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#0080ff,#22c55e)}
   .score-label{font-size:12px;color:var(--muted);margin-bottom:8px}
@@ -118,6 +119,7 @@ function render(){
         <a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.company)}</a>
         <span class="tag ${ (p.tier==="$1M+") ? "tier-1m" : "tier-100k"}">${esc(p.tier || "$100K+")}</span>
         <span class="tag st-${esc(p.status||"new")}">${esc(p.status||"new")}</span>
+        ${p.jev && p.jev.confidence != null ? `<span class="tag jev" title="Calibrated decision from Jev (TypeSafe System One model)">Jev ${(p.jev.confidence*100).toFixed(0)}%</span>` : ""}
       </h2>
       <div class="scorebar"><i style="width:${Math.max(2, Math.min(100, p.score||0))}%"></i></div>
       <div class="score-label">score ${esc(p.score ?? "–")} · first seen ${fmtDate(p.first_seen_utc)}</div>
