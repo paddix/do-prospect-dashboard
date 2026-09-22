@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DO Prospect Scout</title>
+<style>
+  :root{
+    --bg:#0b1220; --panel:#121b2e; --line:#24314f; --text:#e8eef9; --muted:#93a1bd;
+    --blue:#0080ff; --green:#22c55e; --amber:#f59e0b; --red:#ef4444;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--text);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;padding:32px 20px 80px}
+  .wrap{max-width:980px;margin:0 auto}
+  header{display:flex;align-items:baseline;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:6px}
+  h1{font-size:26px;font-weight:700}
+  h1 .dot{color:var(--blue)}
+  #meta{color:var(--muted);font-size:13px}
+  #stats{display:flex;gap:12px;margin:18px 0}
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 18px;flex:1;text-align:center}
+  .stat b{display:block;font-size:24px}
+  .stat span{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.05em}
+  #controls{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 22px}
+  input[type=search]{flex:1;min-width:200px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:9px 12px;color:var(--text);font-size:14px}
+  select{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:9px 12px;color:var(--text);font-size:14px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:14px}
+  .card h2{font-size:17px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .card h2 a{color:var(--text);text-decoration:none}
+  .card h2 a:hover{color:var(--blue)}
+  .tag{font-size:11px;font-weight:600;padding:2px 9px;border-radius:99px;letter-spacing:.03em}
+  .tier-1m{background:rgba(34,197,94,.15);color:var(--green);border:1px solid rgba(34,197,94,.4)}
+  .tier-100k{background:rgba(0,128,255,.15);color:#5ab0ff;border:1px solid rgba(0,128,255,.4)}
+  .st-new{background:rgba(245,158,11,.15);color:var(--amber);border:1px solid rgba(245,158,11,.4)}
+  .st-watching{background:rgba(147,161,189,.12);color:var(--muted);border:1px solid var(--line)}
+  .st-reported{background:rgba(147,161,189,.08);color:var(--muted);border:1px solid var(--line)}
+  .scorebar{height:6px;background:var(--line);border-radius:99px;margin:10px 0 4px;overflow:hidden}
+  .scorebar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#0080ff,#22c55e)}
+  .score-label{font-size:12px;color:var(--muted);margin-bottom:8px}
+  .summary{color:var(--text);margin:6px 0 10px}
+  .section{margin-top:10px}
+  .section b{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+  ul.signals{list-style:none;margin-top:6px}
+  ul.signals li{padding:3px 0;font-size:14px;color:#c6d2e8}
+  ul.signals li .d{color:var(--muted);font-size:12px;margin-right:8px;font-variant-numeric:tabular-nums}
+  ul.signals li a{color:var(--blue);text-decoration:none;font-size:12px;margin-left:6px}
+  .fit,.angle{font-size:14px;color:#c6d2e8;margin-top:4px}
+  #empty{background:var(--panel);border:1px dashed var(--line);border-radius:12px;padding:40px;text-align:center;color:var(--muted)}
+  footer{margin-top:30px;color:var(--muted);font-size:12px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>DO Prospect Scout <span class="dot">●</span></h1>
+    <div id="meta">loading…</div>
+  </header>
+  <div id="stats"></div>
+  <div id="controls">
+    <input type="search" id="q" placeholder="Search companies, signals…">
+    <select id="tier">
+      <option value="">All tiers</option>
+      <option value="$1M+">$1M+</option>
+      <option value="$100K+">$100K+</option>
+    </select>
+    <select id="status">
+      <option value="">All statuses</option>
+      <option value="new">New</option>
+      <option value="watching">Watching</option>
+      <option value="reported">Reported</option>
+    </select>
+    <select id="sort">
+      <option value="score">Sort: score</option>
+      <option value="recent">Sort: newest</option>
+      <option value="name">Sort: name</option>
+    </select>
+  </div>
+  <div id="list"></div>
+  <footer>Data: prospects.json · maintained by the do-prospect-scout agent on DigitalOcean Managed Agents · refreshed on each scout run</footer>
+</div>
+<script>
+let DATA = {prospects: []};
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fmtDate = s => { const d = new Date(s); return isNaN(d) ? esc(s) : d.toISOString().slice(0,10); };
+
+function render(){
+  const q = document.getElementById("q").value.toLowerCase();
+  const tier = document.getElementById("tier").value;
+  const status = document.getElementById("status").value;
+  const sort = document.getElementById("sort").value;
+  let rows = (DATA.prospects || []).filter(p => {
+    if (tier && (p.tier || "$100K+") !== tier) return false;
+    if (status && (p.status || "") !== status) return false;
+    if (q){
+      const hay = [p.company, p.summary, p.do_fit, p.angle, ...(p.signals||[]).map(s => (s.type||"")+" "+(s.detail||""))].join(" ").toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    return true;
+  });
+  rows.sort((a,b) => sort==="name" ? String(a.company).localeCompare(String(b.company))
+    : sort==="recent" ? new Date(b.first_seen_utc||0) - new Date(a.first_seen_utc||0)
+    : (b.score||0) - (a.score||0));
+
+  const all = DATA.prospects || [];
+  document.getElementById("stats").innerHTML = `
+    <div class="stat"><b>${all.length}</b><span>prospects</span></div>
+    <div class="stat"><b>${all.filter(p=>p.status==="new").length}</b><span>new</span></div>
+    <div class="stat"><b>${all.filter(p=>(p.tier||"")==="$1M+").length}</b><span>$1M+ tier</span></div>
+    <div class="stat"><b>${all.filter(p=>p.status==="watching").length}</b><span>watching</span></div>`;
+
+  const list = document.getElementById("list");
+  if (!rows.length){
+    list.innerHTML = `<div id="empty">${all.length ? "No prospects match the filters." : "No prospects yet — the scout will publish here after its next run."}</div>`;
+    return;
+  }
+  list.innerHTML = rows.map(p => `
+    <div class="card">
+      <h2>
+        <a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.company)}</a>
+        <span class="tag ${ (p.tier==="$1M+") ? "tier-1m" : "tier-100k"}">${esc(p.tier || "$100K+")}</span>
+        <span class="tag st-${esc(p.status||"new")}">${esc(p.status||"new")}</span>
+      </h2>
+      <div class="scorebar"><i style="width:${Math.max(2, Math.min(100, p.score||0))}%"></i></div>
+      <div class="score-label">score ${esc(p.score ?? "–")} · first seen ${fmtDate(p.first_seen_utc)}</div>
+      ${p.summary ? `<div class="summary">${esc(p.summary)}</div>` : ""}
+      <div class="section"><b>Signals</b>
+        <ul class="signals">
+          ${(p.signals||[]).map(s => `<li><span class="d">${fmtDate(s.date)}</span>${esc(s.type ? s.type + ": " : "")}${esc(s.detail)}${s.source_url ? ` <a href="${esc(s.source_url)}" target="_blank" rel="noopener">source</a>` : ""}</li>`).join("")}
+        </ul>
+      </div>
+      ${p.do_fit ? `<div class="section"><b>DO fit</b><div class="fit">${esc(p.do_fit)}</div></div>` : ""}
+      ${p.angle ? `<div class="section"><b>Suggested angle</b><div class="angle">${esc(p.angle)}</div></div>` : ""}
+    </div>`).join("");
+}
+
+fetch("prospects.json?t=" + Date.now())
+  .then(r => { if(!r.ok) throw new Error(r.status); return r.json(); })
+  .then(j => {
+    DATA = j;
+    document.getElementById("meta").textContent = "last scout run: " + (j.last_run_utc ? new Date(j.last_run_utc).toLocaleString() : "unknown");
+    render();
+  })
+  .catch(() => {
+    document.getElementById("meta").textContent = "no data";
+    render();
+  });
+["q","tier","status","sort"].forEach(id => document.getElementById(id).addEventListener("input", render));
+</script>
+</body>
+</html>
