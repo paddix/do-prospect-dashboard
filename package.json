@@ -1,0 +1,8 @@
+{
+  "name": "do-prospect-dashboard",
+  "version": "2.0.0",
+  "description": "DO Prospect Scout dashboard with Jev Lab",
+  "main": "server.js",
+  "engines": { "node": ">=18" },
+  "scripts": { "start": "node server.js" }
+}

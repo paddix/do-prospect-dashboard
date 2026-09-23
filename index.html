@@ -7,7 +7,7 @@
 <style>
   :root{
     --bg:#0b1220; --panel:#121b2e; --line:#24314f; --text:#e8eef9; --muted:#93a1bd;
-    --blue:#0080ff; --green:#22c55e; --amber:#f59e0b; --red:#ef4444;
+    --blue:#0080ff; --green:#22c55e; --amber:#f59e0b; --red:#ef4444; --purple:#a855f7;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{background:var(--bg);color:var(--text);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;padding:32px 20px 80px}
@@ -16,13 +16,17 @@
   h1{font-size:26px;font-weight:700}
   h1 .dot{color:var(--blue)}
   #meta{color:var(--muted);font-size:13px}
+  nav{display:flex;gap:6px;margin:18px 0;border-bottom:1px solid var(--line)}
+  nav button{background:none;border:none;color:var(--muted);font:600 15px inherit;padding:10px 16px;cursor:pointer;border-bottom:2px solid transparent}
+  nav button.active{color:var(--text);border-bottom-color:var(--blue)}
+  .view{display:none}.view.active{display:block}
   #stats{display:flex;gap:12px;margin:18px 0}
   .stat{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 18px;flex:1;text-align:center}
   .stat b{display:block;font-size:24px}
   .stat span{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.05em}
   #controls{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 22px}
-  input[type=search]{flex:1;min-width:200px;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:9px 12px;color:var(--text);font-size:14px}
-  select{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:9px 12px;color:var(--text);font-size:14px}
+  input[type=search],textarea,select{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:9px 12px;color:var(--text);font-size:14px;font-family:inherit}
+  input[type=search]{flex:1;min-width:200px}
   .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;margin-bottom:14px}
   .card h2{font-size:17px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
   .card h2 a{color:var(--text);text-decoration:none}
@@ -37,7 +41,7 @@
   .scorebar{height:6px;background:var(--line);border-radius:99px;margin:10px 0 4px;overflow:hidden}
   .scorebar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#0080ff,#22c55e)}
   .score-label{font-size:12px;color:var(--muted);margin-bottom:8px}
-  .summary{color:var(--text);margin:6px 0 10px}
+  .summary{margin:6px 0 10px}
   .section{margin-top:10px}
   .section b{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
   ul.signals{list-style:none;margin-top:6px}
@@ -47,6 +51,30 @@
   .fit,.angle{font-size:14px;color:#c6d2e8;margin-top:4px}
   #empty{background:var(--panel);border:1px dashed var(--line);border-radius:12px;padding:40px;text-align:center;color:var(--muted)}
   footer{margin-top:30px;color:var(--muted);font-size:12px;text-align:center}
+  /* Jev Lab */
+  .lab-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:760px){.lab-grid{grid-template-columns:1fr}}
+  .lab-panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+  .lab-panel h3{font-size:14px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:12px}
+  .lab-panel label{display:block;font-size:13px;color:var(--muted);margin:12px 0 4px}
+  .lab-panel select,.lab-panel textarea{width:100%}
+  .lab-panel textarea{min-height:170px;resize:vertical;line-height:1.5}
+  .runbtn{margin-top:16px;width:100%;background:var(--purple);border:none;border-radius:8px;color:#fff;font:600 15px inherit;padding:11px;cursor:pointer}
+  .runbtn:disabled{opacity:.5;cursor:wait}
+  .qcard{border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin-top:8px;font-size:13px;color:#c6d2e8}
+  .qcard b{color:var(--text)}
+  .ans-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
+  .latency{color:var(--purple);font-weight:700}
+  .prob{margin:10px 0}
+  .prob .lbl{display:flex;justify-content:space-between;font-size:13px;margin-bottom:3px}
+  .prob .bar{height:10px;background:var(--line);border-radius:99px;overflow:hidden}
+  .prob .bar i{display:block;height:100%;background:var(--purple);border-radius:99px;transition:width .4s}
+  .prob.winner .bar i{background:linear-gradient(90deg,#a855f7,#22c55e)}
+  .conf{margin-top:14px;font-size:14px}
+  .conf b{font-size:20px;color:#c084fc}
+  .verdict{margin-top:14px;padding:12px;border-radius:8px;background:rgba(168,85,247,.1);border:1px solid rgba(168,85,247,.35);font-size:14px}
+  .err{margin-top:14px;color:var(--red);font-size:13px;white-space:pre-wrap}
+  .hint{color:var(--muted);font-size:13px}
 </style>
 </head>
 <body>
@@ -55,34 +83,60 @@
     <h1>DO Prospect Scout <span class="dot">●</span></h1>
     <div id="meta">loading…</div>
   </header>
-  <div id="stats"></div>
-  <div id="controls">
-    <input type="search" id="q" placeholder="Search companies, signals…">
-    <select id="tier">
-      <option value="">All tiers</option>
-      <option value="$1M+">$1M+</option>
-      <option value="$100K+">$100K+</option>
-    </select>
-    <select id="status">
-      <option value="">All statuses</option>
-      <option value="new">New</option>
-      <option value="watching">Watching</option>
-      <option value="reported">Reported</option>
-    </select>
-    <select id="sort">
-      <option value="score">Sort: score</option>
-      <option value="recent">Sort: newest</option>
-      <option value="name">Sort: name</option>
-    </select>
+
+  <nav>
+    <button id="tab-prospects" class="active" onclick="showView('prospects')">Prospects</button>
+    <button id="tab-lab" onclick="showView('lab')">Jev Lab</button>
+  </nav>
+
+  <!-- ============ PROSPECTS VIEW ============ -->
+  <div id="view-prospects" class="view active">
+    <div id="stats"></div>
+    <div id="controls">
+      <input type="search" id="q" placeholder="Search companies, signals…">
+      <select id="tier"><option value="">All tiers</option><option value="$1M+">$1M+</option><option value="$100K+">$100K+</option></select>
+      <select id="status"><option value="">All statuses</option><option value="new">New</option><option value="watching">Watching</option><option value="reported">Reported</option></select>
+      <select id="sort"><option value="score">Sort: score</option><option value="recent">Sort: newest</option><option value="name">Sort: name</option></select>
+    </div>
+    <div id="list"></div>
   </div>
-  <div id="list"></div>
-  <footer>Data: prospects.json · maintained by the do-prospect-scout agent on DigitalOcean Managed Agents · refreshed on each scout run</footer>
+
+  <!-- ============ JEV LAB VIEW ============ -->
+  <div id="view-lab" class="view">
+    <div class="lab-grid">
+      <div class="lab-panel">
+        <h3>Input: company state</h3>
+        <label for="labCompany">Company</label>
+        <select id="labCompany" onchange="labPick()"></select>
+        <label for="labState">Dossier sent to Jev as <em>state</em> (edit freely, or paste a new company)</label>
+        <textarea id="labState" placeholder="Acme AI: real-time video generation platform. Raised $60M Series B led by a16z on 2026-09-10. 12k GitHub stars, hiring a Head of Infrastructure."></textarea>
+        <div class="qcard"><b>Question 1 · Choice · tier</b><br>Likely annual cloud infrastructure spend this company reaches within 12 months: $1M+, $100K to $1M, or under $100K</div>
+        <div class="qcard"><b>Question 2 · Noul · ai_native</b><br>This company's core product is built on AI models or agents</div>
+        <button class="runbtn" id="labRun" onclick="labEval()">Run Jev evaluation</button>
+        <p class="hint" style="margin-top:10px">One call, both questions evaluated in parallel. Typed answers with calibrated probabilities; no text generation, nothing to parse.</p>
+      </div>
+      <div class="lab-panel">
+        <h3>Output: typed decision</h3>
+        <div id="labOut"><p class="hint">Run an evaluation to see Jev's answer.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>Data: prospects.json · maintained by the do-prospect-scout agent on DigitalOcean Managed Agents · Jev evaluations by TypeSafe AI</footer>
 </div>
 <script>
 let DATA = {prospects: []};
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const fmtDate = s => { const d = new Date(s); return isNaN(d) ? esc(s) : d.toISOString().slice(0,10); };
 
+function showView(v){
+  document.querySelectorAll(".view").forEach(x=>x.classList.remove("active"));
+  document.querySelectorAll("nav button").forEach(x=>x.classList.remove("active"));
+  document.getElementById("view-"+v).classList.add("active");
+  document.getElementById("tab-"+(v==="prospects"?"prospects":"lab")).classList.add("active");
+}
+
+/* ---------- Prospects view ---------- */
 function render(){
   const q = document.getElementById("q").value.toLowerCase();
   const tier = document.getElementById("tier").value;
@@ -106,7 +160,7 @@ function render(){
     <div class="stat"><b>${all.length}</b><span>prospects</span></div>
     <div class="stat"><b>${all.filter(p=>p.status==="new").length}</b><span>new</span></div>
     <div class="stat"><b>${all.filter(p=>(p.tier||"")==="$1M+").length}</b><span>$1M+ tier</span></div>
-    <div class="stat"><b>${all.filter(p=>p.status==="watching").length}</b><span>watching</span></div>`;
+    <div class="stat"><b>${all.filter(p=>p.jev && p.jev.confidence!=null).length}</b><span>Jev scored</span></div>`;
 
   const list = document.getElementById("list");
   if (!rows.length){
@@ -134,17 +188,72 @@ function render(){
     </div>`).join("");
 }
 
+/* ---------- Jev Lab ---------- */
+function dossier(p){
+  const sig = (p.signals||[]).map(s => `${fmtDate(s.date)} ${s.type||""}: ${s.detail||""}`).join(". ");
+  return `${p.company}: ${p.summary||""} Signals: ${sig}`.trim();
+}
+function labFill(){
+  const sel = document.getElementById("labCompany");
+  const opts = ['<option value="">New company (type below)…</option>']
+    .concat((DATA.prospects||[]).slice().sort((a,b)=>String(a.company).localeCompare(String(b.company)))
+    .map((p,i) => `<option value="${esc(p.company)}">${esc(p.company)}</option>`));
+  sel.innerHTML = opts.join("");
+}
+function labPick(){
+  const name = document.getElementById("labCompany").value;
+  const p = (DATA.prospects||[]).find(x=>x.company===name);
+  document.getElementById("labState").value = p ? dossier(p) : "";
+}
+async function labEval(){
+  const state = document.getElementById("labState").value.trim();
+  const out = document.getElementById("labOut");
+  if (!state){ out.innerHTML = '<p class="err">Enter or pick a company dossier first.</p>'; return; }
+  const btn = document.getElementById("labRun");
+  btn.disabled = true; btn.textContent = "Asking Jev…";
+  out.innerHTML = '<p class="hint">Evaluating…</p>';
+  try{
+    const r = await fetch("/api/jev", {
+      method:"POST", headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({ state, questions: {
+        tier: { type:"choice",
+          instructions:"Likely annual cloud infrastructure spend this company reaches within 12 months",
+          criteria:{ "1m_plus":"At least $1M per year", "100k_plus":"At least $100K but under $1M per year", "under_100k":"Under $100K per year" } },
+        ai_native: { type:"noul", instructions:"This company's core product is built on AI models or agents" }
+      }})
+    });
+    const j = await r.json();
+    if (!r.ok || j.error || !j.answers) throw new Error(j.error || ("HTTP "+r.status+": "+JSON.stringify(j).slice(0,300)));
+    const t = j.answers.tier, n = j.answers.ai_native;
+    const names = { "1m_plus":"$1M+ / year", "100k_plus":"$100K–$1M / year", "under_100k":"Under $100K / year" };
+    const bars = Object.entries(t.probabilities||{}).sort((a,b)=>b[1]-a[1]).map(([k,v]) => `
+      <div class="prob ${k===t.choice?"winner":""}">
+        <div class="lbl"><span>${esc(names[k]||k)}</span><span>${(v*100).toFixed(1)}%</span></div>
+        <div class="bar"><i style="width:${Math.max(1,v*100)}%"></i></div>
+      </div>`).join("");
+    out.innerHTML = `
+      <div class="ans-head"><span>model ${esc(j.model||"jev")}</span><span class="latency">${esc(j.elapsed_ms)} ms round trip</span></div>
+      <b>Infrastructure spend tier</b>
+      ${bars}
+      <div class="conf">Calibrated confidence: <b>${((t.confidence||0)*100).toFixed(0)}%</b></div>
+      <div class="conf" style="margin-top:8px">AI-native: <b>${((n.noul||0)*100).toFixed(0)}%</b></div>
+      <div class="verdict"><b>Typed verdict:</b> ${esc(names[t.choice]||t.choice)} · These are structured values with probabilities, not generated text. Nothing was parsed; nothing can hallucinate.</div>`;
+  }catch(e){
+    out.innerHTML = `<p class="err">Jev call failed:\n${esc(e.message)}</p><p class="hint">Check that TYPESAFE_API_KEY is set on the App Platform component.</p>`;
+  }finally{
+    btn.disabled = false; btn.textContent = "Run Jev evaluation";
+  }
+}
+
+/* ---------- boot ---------- */
 fetch("prospects.json?t=" + Date.now())
   .then(r => { if(!r.ok) throw new Error(r.status); return r.json(); })
   .then(j => {
     DATA = j;
     document.getElementById("meta").textContent = "last scout run: " + (j.last_run_utc ? new Date(j.last_run_utc).toLocaleString() : "unknown");
-    render();
+    render(); labFill();
   })
-  .catch(() => {
-    document.getElementById("meta").textContent = "no data";
-    render();
-  });
+  .catch(() => { document.getElementById("meta").textContent = "no data"; render(); labFill(); });
 ["q","tier","status","sort"].forEach(id => document.getElementById(id).addEventListener("input", render));
 </script>
 </body>
