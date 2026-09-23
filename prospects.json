@@ -1,21 +1,30 @@
 {
-  "last_run_utc": "2026-09-23T02:55:45.804040+00:00",
+  "last_run_utc": "2026-09-23T11:57:31.278933+00:00",
   "prospects": [
     {
       "company": "Cognition AI",
       "url": "https://cognition.ai",
       "first_seen_utc": "2026-09-22T00:00:00+00:00",
-      "status": "reported",
+      "status": "watching",
       "score": 95,
       "tier": "$1M+",
-      "summary": "AI coding agent platform (Devin) handling end-to-end software engineering work autonomously; ~$900M ARR, used by NVIDIA, Citigroup, Goldman Sachs.",
-      "do_fit": "GPU Droplets/Bare Metal, Kubernetes, Managed Databases, Managed Agents. Devin runs agent workloads in sandboxed cloud VMs \u2014 massive inference and orchestration spend.",
-      "angle": "Devin runs fleets of agents that need scalable, cost-effective compute. DO GPU Droplets + Managed Kubernetes for agent sandboxing at ~50% less than hyperscaler pricing.",
-      "jev": {
-        "tier": "1m_plus",
-        "confidence": 1.0
-      },
+      "summary": "AI coding agent (Devin) that writes 90%+ of production code. $2B Series E at $48B valuation (a16z + Accel, Sep 8 2026).",
+      "do_fit": "GPU Droplets, Inference, Kubernetes, Managed Databases",
+      "angle": "Dev platform for Devin's agent workloads \u2014 DO's Inference Engine can run their coding agent inference at scale.",
+      "jev": null,
       "signals": [
+        {
+          "date": "2026-09-23",
+          "type": "funding",
+          "detail": "$2B Series E at $48B valuation led by a16z and Accel (Sep 8 2026)",
+          "source_url": "https://venturecapitaltracker.com/2026-cognition-2b-series-e-48b-a16z-accel"
+        },
+        {
+          "date": "2026-09-16",
+          "type": "product",
+          "detail": "Devin cloud VMs now accessible via terminal/SSH; Dioxus team joining Devin runtime; persistent cloud environments for coding agents",
+          "source_url": "https://runtimewire.com/article/cognition-devin-cloud-terminal-ssh"
+        },
         {
           "date": "2026-09-08",
           "type": "traction",
@@ -33,12 +42,70 @@
           "type": "funding",
           "detail": "Raised $2B Series E at $48B valuation, led by a16z and Accel; ARR nearly doubled to ~$900M in 4 months",
           "source_url": "https://www.reuters.com/technology/cognition-ai-raises-2-billion-48-billion-valuation-2026-09-08/"
+        }
+      ]
+    },
+    {
+      "company": "Emulate",
+      "url": "https://emulate.ai",
+      "first_seen_utc": "2026-09-22T00:00:00+00:00",
+      "status": "watching",
+      "score": 95,
+      "tier": "$1M+",
+      "summary": "DeepMind Genie spinout building world models for physical simulation. $700M Seed at $3.7B valuation (Index + Lightspeed).",
+      "do_fit": "GPU Droplets, Bare Metal GPU, Inference, Kubernetes",
+      "angle": "World model training needs massive compute \u2014 DO's GPU Droplets and Bare Metal at better economics than hyperscaler training clusters.",
+      "jev": null,
+      "signals": [
+        {
+          "date": "2026-09-23",
+          "type": "funding",
+          "detail": "$700M Seed round at $3.7B valuation led by Index Ventures and Lightspeed (Sep 21 2026)",
+          "source_url": "https://pomegra.io/startups/emulate-s-700m-seed-3-7b-with-no-product-2026-09-21"
         },
         {
-          "date": "2026-09-16",
-          "type": "product",
-          "detail": "Devin cloud VMs now accessible via terminal/SSH; Dioxus team joining Devin runtime; persistent cloud environments for coding agents",
-          "source_url": "https://runtimewire.com/article/cognition-devin-cloud-terminal-ssh"
+          "date": "2026-09-20",
+          "type": "team",
+          "detail": "Founded August 2026 by Jack Parker-Holder, Matthew McGill, Philip Ball \u2014 all core contributors to DeepMind's Genie world-model series",
+          "source_url": "https://pomegra.io/startups/emulate-s-700m-seed-3-7b-with-no-product-2026-09-21"
+        },
+        {
+          "date": "2026-09-20",
+          "type": "investor",
+          "detail": "Third DeepMind London spinout this year to close a nine- or ten-figure raise, following Ineffable Intelligence ($1B) and Recursive Superintelligence ($600M)",
+          "source_url": "https://www.silicon.co.uk/e-enterprise/start-up/emulate-funding-ai-631626"
+        },
+        {
+          "date": "2026-09-20",
+          "type": "funding",
+          "detail": "In advanced talks to raise $700M seed at ~$3.7B valuation, co-led by Index Ventures and Lightspeed; Creandum participating",
+          "source_url": "https://thenextweb.com/news/emulate-deepmind-world-models-700m-seed"
+        },
+        {
+          "date": "2026-09-19",
+          "type": "funding",
+          "detail": "In advanced talks for $700M seed at $3.7B valuation, co-led by Index Ventures and Lightspeed; Creandum participating. No product, no website \u2014 bet on world models.",
+          "source_url": "https://theroboticsmedia.com/article/emulate-700m-seed-3-7b-deepmind-index-lightspeed-world-models-september-17-2026"
+        }
+      ]
+    },
+    {
+      "company": "Crux AI",
+      "url": "https://www.datacenterdynamics.com/en/news/google-blackstones-tpu-neocloud-named-crux-ai-hires-metas-data-center-engineering-head-alan-duong/",
+      "first_seen_utc": "2026-09-23T11:55:45.051276+00:00",
+      "status": "new",
+      "score": 95,
+      "tier": "$1M+",
+      "summary": "Google+Blackstone $5B-backed TPU neocloud led by ex-Google VP Benjamin Treynor Sloss. Hired Meta's data center engineering head Alan Duong as CDO. Plans 2GW/year capacity ramp.",
+      "do_fit": "GPU Droplets, Bare Metal GPU, Inference, Kubernetes",
+      "angle": "DO's inference platform can capture workloads before they lock into Crux's proprietary TPU stack \u2014 position as the multi-cloud inference option.",
+      "jev": null,
+      "signals": [
+        {
+          "date": "2026-09-23",
+          "type": "funding",
+          "detail": "Google+Blackstone $5B-backed TPU neocloud led by ex-Google VP Benjamin Treynor Sloss. Hired Meta's data center engineering head Alan Duong as CDO. Plans 2GW/year capacity ramp.",
+          "source_url": "https://www.datacenterdynamics.com/en/news/google-blackstones-tpu-neocloud-named-crux-ai-hires-metas-data-center-engineering-head-alan-duong/"
         }
       ]
     },
@@ -65,56 +132,15 @@
         },
         {
           "date": "2026-09-08",
-          "type": "funding",
-          "detail": "Raised \u20ac3B/$3.5B Series D at \u20ac21B/$24B valuation, largest equity round ever by a European tech company. Led by Samsung Electronics, with EQT Scaleup Europe Fund and PSG Equity.",
-          "source_url": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/"
-        },
-        {
-          "date": "2026-09-08",
           "type": "strategy",
           "detail": "Building 1 GW of compute capacity in Europe by 2030; launched regional data processing controls for sovereign AI deployments",
           "source_url": "https://techcrunch.com/2026/09/08/mistral-raises-e3b-as-sovereign-ai-becomes-big-business/"
-        }
-      ]
-    },
-    {
-      "company": "Emulate",
-      "url": "https://emulate.ai",
-      "first_seen_utc": "2026-09-22T00:00:00+00:00",
-      "status": "reported",
-      "score": 92,
-      "tier": "$1M+",
-      "summary": "Stealth DeepMind spinout building world models \u2014 AI systems that simulate and predict physical environments in real time. Founded by core Genie 3 researchers. Raising $700M seed at $3.7B from Index/Lightspeed/Creandum; largest seed in history.",
-      "do_fit": "GPU Droplets/Bare Metal, Kubernetes. World models require massive GPU clusters for continuous physics simulation \u2014 this is one of the most compute-intensive workloads in AI.",
-      "angle": "World models at scale need GPU infrastructure that hyperscalers will charge a premium for. DO GPU Droplets + Bare Metal as scalable compute for physics simulation at non-hyperscaler pricing.",
-      "jev": {
-        "tier": "1m_plus",
-        "confidence": 0.95
-      },
-      "signals": [
+        },
         {
-          "date": "2026-09-19",
+          "date": "2026-09-08",
           "type": "funding",
-          "detail": "In advanced talks for $700M seed at $3.7B valuation, co-led by Index Ventures and Lightspeed; Creandum participating. No product, no website \u2014 bet on world models.",
-          "source_url": "https://theroboticsmedia.com/article/emulate-700m-seed-3-7b-deepmind-index-lightspeed-world-models-september-17-2026"
-        },
-        {
-          "date": "2026-09-20",
-          "type": "team",
-          "detail": "Founded August 2026 by Jack Parker-Holder, Matthew McGill, Philip Ball \u2014 all core contributors to DeepMind's Genie world-model series",
-          "source_url": "https://pomegra.io/startups/emulate-s-700m-seed-3-7b-with-no-product-2026-09-21"
-        },
-        {
-          "date": "2026-09-20",
-          "type": "investor",
-          "detail": "Third DeepMind London spinout this year to close a nine- or ten-figure raise, following Ineffable Intelligence ($1B) and Recursive Superintelligence ($600M)",
-          "source_url": "https://www.silicon.co.uk/e-enterprise/start-up/emulate-funding-ai-631626"
-        },
-        {
-          "date": "2026-09-20",
-          "type": "funding",
-          "detail": "In advanced talks to raise $700M seed at ~$3.7B valuation, co-led by Index Ventures and Lightspeed; Creandum participating",
-          "source_url": "https://thenextweb.com/news/emulate-deepmind-world-models-700m-seed"
+          "detail": "Raised \u20ac3B/$3.5B Series D at \u20ac21B/$24B valuation, largest equity round ever by a European tech company. Led by Samsung Electronics, with EQT Scaleup Europe Fund and PSG Equity.",
+          "source_url": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/"
         }
       ]
     },
@@ -135,12 +161,6 @@
       "signals": [
         {
           "date": "2026-09-15",
-          "type": "funding",
-          "detail": "Raised $200M at $5B valuation, led by Blackstone, with Khosla, Sequoia, Insight; tripled from $1.5B in April 2026",
-          "source_url": "https://www.reuters.com/business/ai-coding-agent-startup-factory-triples-valuation-5-billion-latest-funding-round-2026-09-15/"
-        },
-        {
-          "date": "2026-09-15",
           "type": "traction",
           "detail": "Revenue doubling every month for 6 consecutive months; used by NVIDIA, Adobe, Morgan Stanley, RBC, Palo Alto Networks, EY, T-Mobile",
           "source_url": "https://enterprisedna.co/resources/news/factory-ai-droids-200m-5b-valuation-enterprise-coding-september-2026/"
@@ -150,6 +170,32 @@
           "type": "investor",
           "detail": "Blackstone is both lead investor and paying customer; Marc Benioff (Salesforce CEO) and Brad Gerstner (Altimeter) as angels",
           "source_url": "https://genaidaily.com/factory-reaches-5b-valuation-following-200m-funding-for-ai-coding-agents/"
+        },
+        {
+          "date": "2026-09-15",
+          "type": "funding",
+          "detail": "Raised $200M at $5B valuation, led by Blackstone, with Khosla, Sequoia, Insight; tripled from $1.5B in April 2026",
+          "source_url": "https://www.reuters.com/business/ai-coding-agent-startup-factory-triples-valuation-5-billion-latest-funding-round-2026-09-15/"
+        }
+      ]
+    },
+    {
+      "company": "Ineffable Intelligence",
+      "url": "https://pomegra.io/startups/emulate-s-700m-seed-3-7b-with-no-product-2026-09-21",
+      "first_seen_utc": "2026-09-23T11:55:45.051276+00:00",
+      "status": "new",
+      "score": 90,
+      "tier": "$1M+",
+      "summary": "DeepMind London spinout that raised $1B. Elite AI research team building next-gen AI systems.",
+      "do_fit": "GPU Droplets, Bare Metal GPU, Inference",
+      "angle": "DeepMind-trained team with massive compute needs \u2014 DO GPU Droplets offer flexible, cost-effective inference away from hyperscaler lock-in.",
+      "jev": null,
+      "signals": [
+        {
+          "date": "2026-09-23",
+          "type": "funding",
+          "detail": "DeepMind London spinout that raised $1B. Elite AI research team building next-gen AI systems.",
+          "source_url": "https://pomegra.io/startups/emulate-s-700m-seed-3-7b-with-no-product-2026-09-21"
         }
       ]
     },
@@ -169,10 +215,10 @@
       },
       "signals": [
         {
-          "date": "2026-08-17",
-          "type": "strategy",
-          "detail": "Intel Capital, NTT DOCOMO, Liberty Global among strategic investors spanning compute, connectivity, distribution, media",
-          "source_url": "https://www.intelcapital.com/higgsfield-raises-400-million-series-b-financing-at-5-4-billion-valuation-with-annualized-revenue-reaching-700-million/"
+          "date": "2026-09-22",
+          "type": "partnership",
+          "detail": "Higgsfield MCP connector integrated into Manus agent platform; creators can use Higgsfield workflows within Manus",
+          "source_url": "https://manus.im/blog/manus-higgsfield-connector"
         },
         {
           "date": "2026-08-17",
@@ -182,15 +228,111 @@
         },
         {
           "date": "2026-08-17",
+          "type": "strategy",
+          "detail": "Intel Capital, NTT DOCOMO, Liberty Global among strategic investors spanning compute, connectivity, distribution, media",
+          "source_url": "https://www.intelcapital.com/higgsfield-raises-400-million-series-b-financing-at-5-4-billion-valuation-with-annualized-revenue-reaching-700-million/"
+        },
+        {
+          "date": "2026-08-17",
           "type": "funding",
           "detail": "Raised $400M Series B at $5.4B valuation, led by DST Global; valuation quadrupled from $1.3B in January 2026",
           "source_url": "https://www.prnewswire.com/news-releases/higgsfield-raises-400-million-series-b-financing-at-5-4-billion-valuation-with-annualized-revenue-reaching-700-million-302852430.html"
+        }
+      ]
+    },
+    {
+      "company": "Positron AI",
+      "url": "https://positron.ai",
+      "first_seen_utc": "2026-09-22T21:49:56.998021+00:00",
+      "status": "new",
+      "score": 90,
+      "tier": "$1M+",
+      "summary": "AI inference infrastructure solving the memory wall problem. Series C led by NEA + Valor/Atreides/Andra (Sep 16 2026).",
+      "do_fit": "GPU Droplets, Inference, Kubernetes",
+      "angle": "Infrastructure peer solving inference efficiency \u2014 DO can partner on hardware benchmarks or offer complementary serving.",
+      "jev": null,
+      "signals": [
+        {
+          "date": "2026-09-23",
+          "type": "funding",
+          "detail": "Series C funding led by NEA with Valor, Atreides, and Andra (Sep 16 2026)",
+          "source_url": "https://www.nea.com/blog/nea-investment-in-positron-ai"
         },
         {
-          "date": "2026-09-22",
-          "type": "partnership",
-          "detail": "Higgsfield MCP connector integrated into Manus agent platform; creators can use Higgsfield workflows within Manus",
-          "source_url": "https://manus.im/blog/manus-higgsfield-connector"
+          "date": "2026-09-16",
+          "type": "strategy",
+          "detail": "Addressing the trillion-dollar inference infrastructure gap; AI capex exceeds $1T in 2026 per Goldman Sachs",
+          "source_url": "https://www.nea.com/blog/nea-investment-in-positron-ai"
+        },
+        {
+          "date": "2026-09-16",
+          "type": "product",
+          "detail": "Custom silicon 'Asimov' taping out on TSMC N3P; designed for inference-era workloads with focus on memory capacity and locality",
+          "source_url": "https://www.nea.com/blog/nea-investment-in-positron-ai"
+        },
+        {
+          "date": "2026-09-16",
+          "type": "funding",
+          "detail": "Raised $875M Series C at $5B valuation; led by NEA, co-led by Valor, Atreides, Andra Capital, Semianalysis Capital, Jim Clark; strategics HRT, Cisco, Naver",
+          "source_url": "https://www.nea.com/blog/nea-investment-in-positron-ai"
+        }
+      ]
+    },
+    {
+      "company": "Gimlet Labs",
+      "url": "https://gimletlabs.ai",
+      "first_seen_utc": "2026-09-22T00:00:00+00:00",
+      "status": "watching",
+      "score": 90,
+      "tier": "$1M+",
+      "summary": "AI inference infrastructure for diverse workloads. a16z investment (Sep 4 2026). Building inference optimization platform.",
+      "do_fit": "GPU Droplets, Inference, Kubernetes",
+      "angle": "Inference infrastructure company \u2014 partner on joint inference offerings or benchmark DO Inference Engine against their stack.",
+      "jev": null,
+      "signals": [
+        {
+          "date": "2026-09-23",
+          "type": "funding",
+          "detail": "a16z investment announced (Sep 4 2026)",
+          "source_url": "https://a16z.com/announcement/investing-in-gimlet/"
+        },
+        {
+          "date": "2026-09-04",
+          "type": "traction",
+          "detail": "Billions in contracted revenue, gigawatts of datacenter pipeline, scaling to hundreds of megawatts in managed capacity",
+          "source_url": "https://gimletlabs.ai/blog/announcing-series-b"
+        },
+        {
+          "date": "2026-09-04",
+          "type": "investor",
+          "detail": "a16z: 'Serving the most consequential workload of our lifetime requires squeezing more intelligence from every watt'",
+          "source_url": "https://a16z.com/announcement/investing-in-gimlet/"
+        },
+        {
+          "date": "2026-09-04",
+          "type": "funding",
+          "detail": "Raised $300M Series B led by a16z at $3B valuation; Menlo, Sapphire, Arm, Samsung Ventures, Tiger Global among backers",
+          "source_url": "https://gimletlabs.ai/blog/announcing-series-b"
+        }
+      ]
+    },
+    {
+      "company": "Recursive Superintelligence",
+      "url": "https://pomegra.io/startups/emulate-s-700m-seed-3-7b-with-no-product-2026-09-21",
+      "first_seen_utc": "2026-09-23T11:55:45.051276+00:00",
+      "status": "new",
+      "score": 88,
+      "tier": "$1M+",
+      "summary": "DeepMind London spinout that raised $600M. Working on AI safety and superintelligence research.",
+      "do_fit": "GPU Droplets, Bare Metal GPU, Inference",
+      "angle": "Well-funded research lab needing massive compute \u2014 DO's Inference Engine can serve their model experimentation needs at better economics than hyperscalers.",
+      "jev": null,
+      "signals": [
+        {
+          "date": "2026-09-23",
+          "type": "funding",
+          "detail": "DeepMind London spinout that raised $600M. Working on AI safety and superintelligence research.",
+          "source_url": "https://pomegra.io/startups/emulate-s-700m-seed-3-7b-with-no-product-2026-09-21"
         }
       ]
     },
@@ -210,9 +352,9 @@
       },
       "signals": [
         {
-          "date": "2026-08-01",
-          "type": "strategy",
-          "detail": "Separated from Meta after Beijing blocked acquisition on export control grounds; early investors helped buy back shares at ~$2B valuation",
+          "date": "2026-09-18",
+          "type": "traction",
+          "detail": "ARR exceeded $100M at time of Meta $2B acquisition deal (Dec 2025); resumed independent operations Sep 2026",
           "source_url": "https://techcrunch.com/2026/09/18/manus-seeks-4b-valuation-in-new-500m-fundraise-as-it-resumes-independent-ops/"
         },
         {
@@ -222,45 +364,72 @@
           "source_url": "https://techcrunch.com/2026/09/18/manus-seeks-4b-valuation-in-new-500m-fundraise-as-it-resumes-independent-ops/"
         },
         {
-          "date": "2026-09-18",
-          "type": "traction",
-          "detail": "ARR exceeded $100M at time of Meta $2B acquisition deal (Dec 2025); resumed independent operations Sep 2026",
+          "date": "2026-08-01",
+          "type": "strategy",
+          "detail": "Separated from Meta after Beijing blocked acquisition on export control grounds; early investors helped buy back shares at ~$2B valuation",
           "source_url": "https://techcrunch.com/2026/09/18/manus-seeks-4b-valuation-in-new-500m-fundraise-as-it-resumes-independent-ops/"
         }
       ]
     },
     {
-      "company": "Positron AI",
-      "url": "https://positron.ai",
-      "first_seen_utc": "2026-09-22T21:49:56.998021+00:00",
-      "status": "new",
+      "company": "Firecrawl",
+      "url": "https://firecrawl.dev",
+      "first_seen_utc": "2026-09-22T00:00:00+00:00",
+      "status": "watching",
       "score": 88,
       "tier": "$1M+",
-      "summary": "Next-gen inference chip company designing custom silicon ('Asimov', TSMC N3P) to solve memory wall and networking bottlenecks for AI inference workloads. Led by Mitesh Agrawal (ex-Lambda COO) and Thomas Sohmers (ex-Groq). Team from Groq, Lambda, Nvidia, Amazon, F5.",
-      "do_fit": "Bare Metal, GPU Droplets, Kubernetes \u2014 Positron's inference customers will need complementary cloud infrastructure",
-      "angle": "As Positron gets its inference silicon into production, your early adopter customers will need cloud infrastructure to build around your chips. DigitalOcean can be the default cloud partner for startups deploying on Positron hardware, providing the storage, networking, and orchestration layer.",
-      "jev": {
-        "tier": "1m_plus",
-        "confidence": 0.85
-      },
+      "summary": "Web crawling/data extraction platform built by Mendable. $75M Series B. Launched Alexandria knowledge library. 1.5M developers, 150K companies.",
+      "do_fit": "Kubernetes, Managed Databases, App Platform, Inference",
+      "angle": "Massive crawling infrastructure needs \u2014 DO's Kubernetes and Managed DB can scale their data pipeline at lower cost.",
+      "jev": null,
       "signals": [
         {
-          "date": "2026-09-16",
-          "type": "product",
-          "detail": "Custom silicon 'Asimov' taping out on TSMC N3P; designed for inference-era workloads with focus on memory capacity and locality",
-          "source_url": "https://www.nea.com/blog/nea-investment-in-positron-ai"
-        },
-        {
-          "date": "2026-09-16",
-          "type": "strategy",
-          "detail": "Addressing the trillion-dollar inference infrastructure gap; AI capex exceeds $1T in 2026 per Goldman Sachs",
-          "source_url": "https://www.nea.com/blog/nea-investment-in-positron-ai"
-        },
-        {
-          "date": "2026-09-16",
+          "date": "2026-09-23",
           "type": "funding",
-          "detail": "Raised $875M Series C at $5B valuation; led by NEA, co-led by Valor, Atreides, Andra Capital, Semianalysis Capital, Jim Clark; strategics HRT, Cisco, Naver",
-          "source_url": "https://www.nea.com/blog/nea-investment-in-positron-ai"
+          "detail": "$75M Series B; launched Alexandria knowledge library; 1.5M devs, 150K companies (Sep 22 2026)",
+          "source_url": "https://www.firecrawl.dev/blog/introducing-alexandria-series-b"
+        },
+        {
+          "date": "2026-09-22",
+          "type": "traction",
+          "detail": "Valuation multiplied 10x+ since Series A; planning Brazil office in 2027",
+          "source_url": "https://startups.com.br/negocios/rodada-de-investimento/firecrawl-levanta-r-400m-para-construir-a-biblioteca-da-ia-agentica/"
+        },
+        {
+          "date": "2026-09-22",
+          "type": "strategy",
+          "detail": "Paying data providers when AI agents use their knowledge through Alexandria; Wikimedia Enterprise among first partners",
+          "source_url": "https://www.pr.com/press-release/979737"
+        },
+        {
+          "date": "2026-09-22",
+          "type": "product",
+          "detail": "Launched Alexandria \u2014 unified knowledge layer for AI agents with paid data provider marketplace, Research Index (tens of millions of papers), Developer Index, Government Index",
+          "source_url": "https://www.firecrawl.dev/blog/introducing-alexandria-series-b"
+        },
+        {
+          "date": "2026-09-22",
+          "type": "product",
+          "detail": "Launched Alexandria \u2014 unified knowledge layer for AI agents with paid data provider marketplace",
+          "source_url": "https://www.firecrawl.dev/blog/introducing-alexandria-series-b"
+        },
+        {
+          "date": "2026-09-22",
+          "type": "product",
+          "detail": "Launched Alexandria: knowledge platform aggregating specialized datasets from 100+ sources for AI agents",
+          "source_url": "https://www.firecrawl.dev/blog/introducing-alexandria-series-b"
+        },
+        {
+          "date": "2026-09-22",
+          "type": "funding",
+          "detail": "Raised $75M Series B led by Smash Capital; Altos Ventures, Nexus Venture Partners, Y Combinator, Freestyle, Offline Ventures participated",
+          "source_url": "https://www.firecrawl.dev/blog/introducing-alexandria-series-b"
+        },
+        {
+          "date": "2026-09-22",
+          "type": "funding",
+          "detail": "Raised $75M Series B led by Smash Capital; Altos Ventures, Nexus Venture Partners, YC, Freestyle participated",
+          "source_url": "https://www.firecrawl.dev/blog/introducing-alexandria-series-b"
         }
       ]
     },
@@ -287,50 +456,71 @@
         },
         {
           "date": "2026-09-14",
-          "type": "customers",
-          "detail": "4,300+ paying customers including OpenAI, Snap, NVIDIA, Netflix, JPMorgan Chase",
+          "type": "funding",
+          "detail": "Raised $550M Series E at $12.55B valuation, led by Lightspeed, Wellington, Goldman Sachs, Tiger Global",
           "source_url": "https://temporal.io/news/temporal-raises-550m-at-a-12-55b-valuation"
         },
         {
           "date": "2026-09-14",
-          "type": "funding",
-          "detail": "Raised $550M Series E at $12.55B valuation, led by Lightspeed, Wellington, Goldman Sachs, Tiger Global",
+          "type": "customers",
+          "detail": "4,300+ paying customers including OpenAI, Snap, NVIDIA, Netflix, JPMorgan Chase",
           "source_url": "https://temporal.io/news/temporal-raises-550m-at-a-12-55b-valuation"
         }
       ]
     },
     {
-      "company": "Gimlet Labs",
-      "url": "https://gimletlabs.ai",
+      "company": "Verda",
+      "url": "https://verda.com",
       "first_seen_utc": "2026-09-22T00:00:00+00:00",
-      "status": "reported",
+      "status": "watching",
       "score": 88,
       "tier": "$1M+",
-      "summary": "Multi-silicon inference cloud that splits AI workloads across GPUs, CPUs, and custom accelerators. Agent-native inference infrastructure. $300M Series B at $3B from a16z. Serving frontier labs and hyperscalers.",
-      "do_fit": "GPU Droplets/Bare Metal, Kubernetes. Gimlet orchestrates heterogeneous compute \u2014 DO GPU + CPU Droplets as nodes in their multi-silicon fleet. Their customers need diverse hardware pools.",
-      "angle": "Your multi-silicon thesis means you value diverse hardware. DO GPU Droplets and Bare Metal as expansion nodes when your customers need capacity beyond hyperscaler regions \u2014 especially in emerging markets.",
-      "jev": {
-        "tier": "1m_plus",
-        "confidence": 1.0
-      },
+      "summary": "Full-stack AI cloud, Europe's latest unicorn (Helsinki). $189M Series B led by Emergence Capital (Sep 22 2026).",
+      "do_fit": "GPU Droplets, Inference, Kubernetes, Managed Databases",
+      "angle": "European AI cloud competitor scaling fast \u2014 DO can partner on cross-region inference serving or learn from their European GTM.",
+      "jev": null,
       "signals": [
         {
-          "date": "2026-09-04",
-          "type": "traction",
-          "detail": "Billions in contracted revenue, gigawatts of datacenter pipeline, scaling to hundreds of megawatts in managed capacity",
-          "source_url": "https://gimletlabs.ai/blog/announcing-series-b"
-        },
-        {
-          "date": "2026-09-04",
-          "type": "investor",
-          "detail": "a16z: 'Serving the most consequential workload of our lifetime requires squeezing more intelligence from every watt'",
-          "source_url": "https://a16z.com/announcement/investing-in-gimlet/"
-        },
-        {
-          "date": "2026-09-04",
+          "date": "2026-09-23",
           "type": "funding",
-          "detail": "Raised $300M Series B led by a16z at $3B valuation; Menlo, Sapphire, Arm, Samsung Ventures, Tiger Global among backers",
-          "source_url": "https://gimletlabs.ai/blog/announcing-series-b"
+          "detail": "$189M Series B led by Emergence Capital, reaching unicorn status (Sep 22 2026)",
+          "source_url": "https://verda.com/blog/verda-raises-189m"
+        },
+        {
+          "date": "2026-09-22",
+          "type": "traction",
+          "detail": "Opened offices in London; expanded across Europe, US and Asia; reached $165M ARR (July 2026)",
+          "source_url": "https://tech.eu/2026/09/22/verda-raises-189m-to-advance-its-ai-cloud-and-expand-compute-capacity/"
+        },
+        {
+          "date": "2026-09-22",
+          "type": "traction",
+          "detail": "Opened London offices; expanded across Europe, US and Asia; reached $165M ARR. Building full-stack AI cloud from Helsinki.",
+          "source_url": "https://tech.eu/2026/09/22/verda-raises-189m-to-advance-its-ai-cloud-and-expand-compute-capacity/"
+        },
+        {
+          "date": "2026-09-22",
+          "type": "traction",
+          "detail": "$165M annualized revenue run rate (July 2026); planning 250+ MW of operations in 2027",
+          "source_url": "https://runtimewire.com/article/verda-raises-189m-series-b-ai-cloud"
+        },
+        {
+          "date": "2026-09-22",
+          "type": "strategy",
+          "detail": "Building full-stack AI cloud from Helsinki; 'north star is to build the first true tech company in Europe'",
+          "source_url": "https://verda.com/blog/what-189m-in-funding-unlocks-for-verda-customers"
+        },
+        {
+          "date": "2026-09-22",
+          "type": "funding",
+          "detail": "Raised $189M Series B led by Emergence Capital; Supermicro, MUFG participated; total funding >$450M, valued at $1B+",
+          "source_url": "https://tech.eu/2026/09/22/verda-raises-189m-to-advance-its-ai-cloud-and-expand-compute-capacity/"
+        },
+        {
+          "date": "2026-09-22",
+          "type": "funding",
+          "detail": "Raised $189M Series B led by Emergence Capital at $1B+ unicorn valuation; Supermicro, MUFG participated; $165M ARR, planning 250MW+ by 2027.",
+          "source_url": "https://verda.com/blog/what-189m-in-funding-unlocks-for-verda-customers"
         }
       ]
     },
@@ -350,10 +540,10 @@
       },
       "signals": [
         {
-          "date": "2026-08-05",
-          "type": "deal",
-          "detail": "Signed $13B, 5-year cloud contract with Jane Street for GPU and AI infrastructure",
-          "source_url": "https://techcrunch.com/2026/09/03/crusoe-reportedly-raises-3b-at-a-30b-valuation/"
+          "date": "2026-09-17",
+          "type": "traction",
+          "detail": "$140B+ total contracted value; Crusoe Cloud annualized revenue up 20x YoY; Managed Inference ARR topped $100M within first year",
+          "source_url": "https://siliconangle.com/2026/09/17/ai-data-center-builder-crusoe-valued-at-30-9b-in-3-9b-round/"
         },
         {
           "date": "2026-09-17",
@@ -362,10 +552,30 @@
           "source_url": "https://www.crusoe.ai/resources/newsroom/crusoe-announces-series-f-funding"
         },
         {
-          "date": "2026-09-17",
-          "type": "traction",
-          "detail": "$140B+ total contracted value; Crusoe Cloud annualized revenue up 20x YoY; Managed Inference ARR topped $100M within first year",
-          "source_url": "https://siliconangle.com/2026/09/17/ai-data-center-builder-crusoe-valued-at-30-9b-in-3-9b-round/"
+          "date": "2026-08-05",
+          "type": "deal",
+          "detail": "Signed $13B, 5-year cloud contract with Jane Street for GPU and AI infrastructure",
+          "source_url": "https://techcrunch.com/2026/09/03/crusoe-reportedly-raises-3b-at-a-30b-valuation/"
+        }
+      ]
+    },
+    {
+      "company": "Moonshot AI",
+      "url": "https://github.com/moonshotai/Kimi-K3",
+      "first_seen_utc": "2026-09-23T11:55:45.051276+00:00",
+      "status": "new",
+      "score": 85,
+      "tier": "$1M+",
+      "summary": "Frontier open-weight multimodal AI company. Released Kimi K3 (2.8T params, 1M-token context) on GitHub. Already partnered with DO and vLLM for day-0 inference serving.",
+      "do_fit": "GPU Droplets, Bare Metal GPU, Inference, Spaces",
+      "angle": "Already on DO's platform \u2014 expand the partnership from inference serving to full-stack cloud (Kubernetes, Managed DB, Spaces).",
+      "jev": null,
+      "signals": [
+        {
+          "date": "2026-09-23",
+          "type": "funding",
+          "detail": "Frontier open-weight multimodal AI company. Released Kimi K3 (2.8T params, 1M-token context) on GitHub. Already partnered with DO and vLLM for day-0 inference serving.",
+          "source_url": "https://github.com/moonshotai/Kimi-K3"
         }
       ]
     },
@@ -386,6 +596,12 @@
       "signals": [
         {
           "date": "2026-09-10",
+          "type": "traction",
+          "detail": "Enterprise customers include CVS Health, Wealthfront, Suntory, Banco Itau, Gallup; 61 employees; ~677K monthly web visitors (June 2026)",
+          "source_url": "https://www.simile.ai/"
+        },
+        {
+          "date": "2026-09-10",
           "type": "investor",
           "detail": "Angels include Fei-Fei Li, Andrej Karpathy, Adam D'Angelo; founding team introduced concepts of generative agents and rich agentic simulations",
           "source_url": "https://www.simile.ai/"
@@ -395,124 +611,6 @@
           "type": "funding",
           "detail": "Raised $200M Series B at $2B valuation, led by Greenoaks (July 2026); $100M Series A led by Index Ventures (Feb 2026); total $300M+",
           "source_url": "https://www.simile.ai/"
-        },
-        {
-          "date": "2026-09-10",
-          "type": "traction",
-          "detail": "Enterprise customers include CVS Health, Wealthfront, Suntory, Banco Itau, Gallup; 61 employees; ~677K monthly web visitors (June 2026)",
-          "source_url": "https://www.simile.ai/"
-        }
-      ]
-    },
-    {
-      "company": "Firecrawl",
-      "url": "https://firecrawl.dev",
-      "first_seen_utc": "2026-09-22T00:00:00+00:00",
-      "status": "reported",
-      "score": 85,
-      "tier": "$1M+",
-      "summary": "Web context API for AI agents \u2014 search, scrape, parse, and crawl web content. Just raised $75M Series B for Alexandria, an AI agent knowledge library. YC-backed, used by major AI labs.",
-      "do_fit": "Kubernetes, Managed Databases, Spaces. Web-scale crawling and indexing needs massive storage and compute \u2014 DO Spaces for crawled data, Kubernetes for crawling infrastructure.",
-      "angle": "You're building the knowledge layer for AI agents. DO Spaces + Managed Databases for your crawled content index, GPU Droplets for embedding pipelines \u2014 reliable, cost-predictable infrastructure at web scale.",
-      "jev": {
-        "tier": "1m_plus",
-        "confidence": 0.9
-      },
-      "signals": [
-        {
-          "date": "2026-09-22",
-          "type": "product",
-          "detail": "Launched Alexandria \u2014 unified knowledge layer for AI agents with paid data provider marketplace, Research Index (tens of millions of papers), Developer Index, Government Index",
-          "source_url": "https://www.firecrawl.dev/blog/introducing-alexandria-series-b"
-        },
-        {
-          "date": "2026-09-22",
-          "type": "funding",
-          "detail": "Raised $75M Series B led by Smash Capital; Altos Ventures, Nexus Venture Partners, YC, Freestyle participated",
-          "source_url": "https://www.firecrawl.dev/blog/introducing-alexandria-series-b"
-        },
-        {
-          "date": "2026-09-22",
-          "type": "product",
-          "detail": "Launched Alexandria \u2014 unified knowledge layer for AI agents with paid data provider marketplace",
-          "source_url": "https://www.firecrawl.dev/blog/introducing-alexandria-series-b"
-        },
-        {
-          "date": "2026-09-22",
-          "type": "traction",
-          "detail": "Valuation multiplied 10x+ since Series A; planning Brazil office in 2027",
-          "source_url": "https://startups.com.br/negocios/rodada-de-investimento/firecrawl-levanta-r-400m-para-construir-a-biblioteca-da-ia-agentica/"
-        },
-        {
-          "date": "2026-09-22",
-          "type": "product",
-          "detail": "Launched Alexandria: knowledge platform aggregating specialized datasets from 100+ sources for AI agents",
-          "source_url": "https://www.firecrawl.dev/blog/introducing-alexandria-series-b"
-        },
-        {
-          "date": "2026-09-22",
-          "type": "funding",
-          "detail": "Raised $75M Series B led by Smash Capital; Altos Ventures, Nexus Venture Partners, Y Combinator, Freestyle, Offline Ventures participated",
-          "source_url": "https://www.firecrawl.dev/blog/introducing-alexandria-series-b"
-        },
-        {
-          "date": "2026-09-22",
-          "type": "strategy",
-          "detail": "Paying data providers when AI agents use their knowledge through Alexandria; Wikimedia Enterprise among first partners",
-          "source_url": "https://www.pr.com/press-release/979737"
-        }
-      ]
-    },
-    {
-      "company": "Verda",
-      "url": "https://verda.com",
-      "first_seen_utc": "2026-09-22T00:00:00+00:00",
-      "status": "reported",
-      "score": 85,
-      "tier": "$1M+",
-      "summary": "Full-stack European AI cloud \u2014 builds own data centers, hardware, and cloud platform. $450M+ total funding, $165M ARR, $1B+ valuation (unicorn). $189M Series B led by Emergence Capital, backed by Supermicro, MUFG. Planning 250MW+ by 2027.",
-      "do_fit": "GPU Droplets/Bare Metal, Kubernetes. Verda is building a European AI cloud \u2014 DO as a complementary provider for their customers needing North American/Asian GPU regions.",
-      "angle": "Verda owns Europe. DO GPUs + Bare Metal for their customers who need global GPU regions \u2014 we cover the Americas and Asia where Verda isn't building yet. A multi-cloud GPU partnership.",
-      "jev": {
-        "tier": "1m_plus",
-        "confidence": 1.0
-      },
-      "signals": [
-        {
-          "date": "2026-09-22",
-          "type": "funding",
-          "detail": "Raised $189M Series B led by Emergence Capital at $1B+ unicorn valuation; Supermicro, MUFG participated; $165M ARR, planning 250MW+ by 2027.",
-          "source_url": "https://verda.com/blog/what-189m-in-funding-unlocks-for-verda-customers"
-        },
-        {
-          "date": "2026-09-22",
-          "type": "traction",
-          "detail": "Opened offices in London; expanded across Europe, US and Asia; reached $165M ARR (July 2026)",
-          "source_url": "https://tech.eu/2026/09/22/verda-raises-189m-to-advance-its-ai-cloud-and-expand-compute-capacity/"
-        },
-        {
-          "date": "2026-09-22",
-          "type": "traction",
-          "detail": "Opened London offices; expanded across Europe, US and Asia; reached $165M ARR. Building full-stack AI cloud from Helsinki.",
-          "source_url": "https://tech.eu/2026/09/22/verda-raises-189m-to-advance-its-ai-cloud-and-expand-compute-capacity/"
-        },
-        {
-          "date": "2026-09-22",
-          "type": "funding",
-          "detail": "Raised $189M Series B led by Emergence Capital; Supermicro, MUFG participated; total funding >$450M, valued at $1B+",
-          "source_url": "https://tech.eu/2026/09/22/verda-raises-189m-to-advance-its-ai-cloud-and-expand-compute-capacity/"
-        },
-        {
-          "date": "2026-09-22",
-          "type": "strategy",
-          "detail": "Building full-stack AI cloud from Helsinki; 'north star is to build the first true tech company in Europe'",
-          "source_url": "https://verda.com/blog/what-189m-in-funding-unlocks-for-verda-customers"
-        },
-        {
-          "date": "2026-09-22",
-          "type": "traction",
-          "detail": "$165M annualized revenue run rate (July 2026); planning 250+ MW of operations in 2027",
-          "source_url": "https://runtimewire.com/article/verda-raises-189m-series-b-ai-cloud"
         }
       ]
     },
@@ -539,15 +637,53 @@
         },
         {
           "date": "2026-01-23",
-          "type": "funding",
-          "detail": "Raised $150M seed at $800M valuation (one of largest seeds of 2026), co-led by a16z and Lightspeed, with Sequoia, Altimeter, Redpoint",
-          "source_url": "https://www.caproasia.com/2026/01/23/united-states-vllm-startup-inferact-raised-150-million-at-800-million-valuation/"
-        },
-        {
-          "date": "2026-01-23",
           "type": "product",
           "detail": "Building commercial inference products on top of vLLM, the de facto standard OSS inference engine used by Meta, Google, Character.ai in production",
           "source_url": "https://venturecapitaltracker.com/startup/inferact"
+        },
+        {
+          "date": "2026-01-23",
+          "type": "funding",
+          "detail": "Raised $150M seed at $800M valuation (one of largest seeds of 2026), co-led by a16z and Lightspeed, with Sequoia, Altimeter, Redpoint",
+          "source_url": "https://www.caproasia.com/2026/01/23/united-states-vllm-startup-inferact-raised-150-million-at-800-million-valuation/"
+        }
+      ]
+    },
+    {
+      "company": "Snorkel AI",
+      "url": "https://snorkel.ai",
+      "first_seen_utc": "2026-09-22T21:06:55.262539+00:00",
+      "status": "watching",
+      "score": 84,
+      "tier": "$1M+",
+      "summary": "Data development platform for frontier AI. $350M Series E at $3.5B (Insight/S32/GV, Sep 22 2026). Pivoted to fully-managed training data + RL training.",
+      "do_fit": "GPU Droplets, Inference, Kubernetes, Managed Databases",
+      "angle": "Data pipeline for frontier AI at massive scale \u2014 DO's GPU Droplets can power their RL training and data processing workloads.",
+      "jev": null,
+      "signals": [
+        {
+          "date": "2026-09-23",
+          "type": "funding",
+          "detail": "$350M Series E at $3.5B valuation led by Insight Partners, S32, and GV (Sep 22 2026)",
+          "source_url": "https://www.prnewswire.com/news-releases/snorkel-ai-raises-350m-to-scale-the-data-factory-for-frontier-ai-302886796.html"
+        },
+        {
+          "date": "2026-09-22",
+          "type": "traction",
+          "detail": "Revenue grew from ~$20M ARR to $350M ARR in 12 months. Expects profitability by end of 2026. Frontier AI labs demand increasingly complex training data.",
+          "source_url": "https://www.reuters.com/legal/transactional/snorkel-ai-valued-35-billion-amid-surging-demand-complex-ai-training-data-2026-09-22/"
+        },
+        {
+          "date": "2026-09-22",
+          "type": "product",
+          "detail": "Shifted from software to data-as-a-service. Pairs human domain experts with thousands of specialized AI models/agents to create and vet datasets. Tens of thousands of domain experts in network.",
+          "source_url": "https://www.channelnewsasia.com/business/exclusive-snorkel-ai-valued-35-billion-amid-surging-demand-complex-ai-training-data-6402476"
+        },
+        {
+          "date": "2026-09-22",
+          "type": "funding",
+          "detail": "Raised $350M at $3.5B valuation led by Insight Partners and S32; Greylock, Addition, Wells Fargo participated. ARR surged from $20M to $350M in one year.",
+          "source_url": "https://www.reuters.com/legal/transactional/snorkel-ai-valued-35-billion-amid-surging-demand-complex-ai-training-data-2026-09-22/"
         }
       ]
     },
@@ -567,12 +703,6 @@
       },
       "signals": [
         {
-          "date": "2026-05-12",
-          "type": "product",
-          "detail": "Achieved truly serverless GPUs with CUDA checkpoint/restore \u2014 spinning up LLM serving instances in seconds, not minutes",
-          "source_url": "https://modal.com/blog/truly-serverless-gpus"
-        },
-        {
           "date": "2026-09-19",
           "type": "traction",
           "detail": "920K+ monthly web visitors; sub-10ms overhead latency globally; sub-second container starts",
@@ -583,6 +713,56 @@
           "type": "funding",
           "detail": "Reportedly raising new round at $2.5B valuation; previously raised $355M Series C in May 2026 ($483M total)",
           "source_url": "https://www.techshotsapp.com/artificial-intelligence/ai-infrastructure-startup-modal-labs-eyes-25-billion-valuation-in-new-funding-round"
+        },
+        {
+          "date": "2026-05-12",
+          "type": "product",
+          "detail": "Achieved truly serverless GPUs with CUDA checkpoint/restore \u2014 spinning up LLM serving instances in seconds, not minutes",
+          "source_url": "https://modal.com/blog/truly-serverless-gpus"
+        }
+      ]
+    },
+    {
+      "company": "Mecka AI",
+      "url": "https://mecka.ai",
+      "first_seen_utc": "2026-09-22T00:00:00+00:00",
+      "status": "watching",
+      "score": 84,
+      "tier": "$1M+",
+      "summary": "Human motion data for robot training. Near $500M valuation in Sequoia-led round (Sep 12 2026).",
+      "do_fit": "GPU Droplets, Inference, Spaces, Kubernetes",
+      "angle": "Robot training data at massive scale needs GPU compute and storage \u2014 DO's GPU Droplets + Spaces for training data pipelines.",
+      "jev": null,
+      "signals": [
+        {
+          "date": "2026-09-23",
+          "type": "funding",
+          "detail": "Near $500M valuation in Sequoia-led round (Sep 12 2026)",
+          "source_url": "https://aistartupsnews.com/topics/series-a/"
+        },
+        {
+          "date": "2026-09-11",
+          "type": "strategy",
+          "detail": "Positioned as 'Scale AI for robotics' \u2014 capturing egocentric human motion data for embodied AI training",
+          "source_url": "https://endroid.com/2026/mecka-ai-sequoia-500m-robot-data/"
+        },
+        {
+          "date": "2026-09-11",
+          "type": "funding",
+          "detail": "Sequoia Capital leading new round at ~$500M valuation; just 3 months after $60M Series A from Framework Ventures",
+          "source_url": "https://techcrunch.com/2026/09/11/mecka-ai-nears-500m-valuation-in-sequoia-led-deal-amid-rush-for-robot-training-data/"
+        },
+        {
+          "date": "2026-09-11",
+          "type": "funding",
+          "detail": "Nearing ~$500M valuation in Sequoia-led round amid rush for robot training data",
+          "source_url": "https://techcrunch.com/2026/09/11/mecka-ai-nears-500m-valuation-in-sequoia-led-deal-amid-rush-for-robot-training-data/"
+        },
+        {
+          "date": "2026-06-01",
+          "type": "traction",
+          "detail": "Projecting $100M annual run rate by year-end 2026; 66 employees (+371% YoY); customers in robotics and autonomous vehicle sectors",
+          "source_url": "https://startupfortune.com/mecka-ai-turns-robot-training-data-into-a-startup-category/"
         }
       ]
     },
@@ -622,6 +802,38 @@
       ]
     },
     {
+      "company": "Arcee AI",
+      "url": "https://arcee.ai",
+      "first_seen_utc": "2026-09-22T18:57:47.682546+00:00",
+      "status": "watching",
+      "score": 82,
+      "tier": "$1M+",
+      "summary": "American open-weight AI models (Trinity family). US DOE partner. Series B at $1B+ valuation (Vista/Cambium/Emergence, Sep 16 2026).",
+      "do_fit": "GPU Droplets, Inference, Spaces",
+      "angle": "US government-aligned open model company \u2014 DO's Inference Engine can serve their Trinity models as a secure, US-based option.",
+      "jev": null,
+      "signals": [
+        {
+          "date": "2026-09-23",
+          "type": "funding",
+          "detail": "Series B at $1B+ valuation led by Vista, Cambium, and Emergence Capital (Sep 16 2026)",
+          "source_url": "https://www.arcee.ai/blog/arcee-ai-raises-series-b-to-build-the-future-of-american-open-models"
+        },
+        {
+          "date": "2026-09-16",
+          "type": "traction",
+          "detail": "Trained entire 2025 model lineup including 400B-parameter Trinity Large MoE for ~$20M total. Partnerships with U.S. Department of Energy and national labs.",
+          "source_url": "https://fortune.com/2026/09/16/arcee-ai-trained-four-models-for-20-million-now-its-worth-1-billion/"
+        },
+        {
+          "date": "2026-09-16",
+          "type": "funding",
+          "detail": "Raised ~$150M Series B at $1B+ valuation led by Vista Equity Partners, Cambium Capital, Emergence Capital; Microsoft M12, Hitachi, Wipro participated.",
+          "source_url": "https://www.arcee.ai/blog/arcee-ai-raises-series-b-to-build-the-future-of-american-open-models"
+        }
+      ]
+    },
+    {
       "company": "Lightfield",
       "url": "https://lightfield.com",
       "first_seen_utc": "2026-09-22T00:00:00+00:00",
@@ -657,6 +869,84 @@
       ]
     },
     {
+      "company": "Brahma AI",
+      "url": "https://www.prnewswire.co.uk/news-releases/brahma-ai-raises-150-million-round-led-by-multiples-302886970.html",
+      "first_seen_utc": "2026-09-23T11:55:45.051276+00:00",
+      "status": "new",
+      "score": 82,
+      "tier": "$1M+",
+      "summary": "AI content and film production tools. Raised $150M round led by Multiples (Sep 2026). Customers include Warner Bros, NBA, Mayo Clinic. Won an Emmy.",
+      "do_fit": "GPU Droplets, Inference, Spaces, Managed Databases",
+      "angle": "Video/film AI workloads need massive GPU compute and storage \u2014 DO's GPU Droplets + Spaces at 1/3 hyperscaler cost.",
+      "jev": null,
+      "signals": [
+        {
+          "date": "2026-09-23",
+          "type": "funding",
+          "detail": "AI content and film production tools. Raised $150M round led by Multiples (Sep 2026). Customers include Warner Bros, NBA, Mayo Clinic. Won an Emmy.",
+          "source_url": "https://www.prnewswire.co.uk/news-releases/brahma-ai-raises-150-million-round-led-by-multiples-302886970.html"
+        }
+      ]
+    },
+    {
+      "company": "Go.AI",
+      "url": "https://go.ai",
+      "first_seen_utc": "2026-09-22T00:00:00+00:00",
+      "status": "watching",
+      "score": 82,
+      "tier": "$1M+",
+      "summary": "On-prem AI hardware+software for regulated industries. $85M Series A (Updata Partners, Sep 22 2026). 50+ employees. Launched Go1 hardware.",
+      "do_fit": "GPU Droplets, Kubernetes, Managed Databases",
+      "angle": "On-prem AI company \u2014 DO can be their cloud partner for hybrid deployments and overflow inference capacity.",
+      "jev": null,
+      "signals": [
+        {
+          "date": "2026-09-23",
+          "type": "funding",
+          "detail": "$85M Series A led by Updata Partners; launched Go1 hardware; 50+ employees (Sep 22 2026)",
+          "source_url": "https://go.ai/company/press/series-a-funding"
+        },
+        {
+          "date": "2026-09-22",
+          "type": "traction",
+          "detail": "200+ customers across financial services, healthcare, aerospace, defense, manufacturing; 12.5M+ queries/day; 8x ARR growth YoY, profitable",
+          "source_url": "https://www.financialcontent.com/article/bizwire-2026-9-22-goai-raises-85-million-series-a-to-accelerate-on-prem-ai-infrastructure-for-regulated-industries"
+        },
+        {
+          "date": "2026-09-22",
+          "type": "funding",
+          "detail": "Raised $85M Series A led by Updata Partners; total $90M funding. 200+ customers, 12.5M+ daily queries, 8x ARR YoY, profitable.",
+          "source_url": "https://www.financialcontent.com/article/bizwire-2026-9-22-goai-raises-85-million-series-a-to-accelerate-on-prem-ai-infrastructure-for-regulated-industries"
+        },
+        {
+          "date": "2026-09-22",
+          "type": "funding",
+          "detail": "Raised $85M Series A led by Updata Partners; total $90M funding",
+          "source_url": "https://www.financialcontent.com/article/bizwire-2026-9-22-goai-raises-85-million-series-a-to-accelerate-on-prem-ai-infrastructure-for-regulated-industries"
+        }
+      ]
+    },
+    {
+      "company": "Zhipu AI",
+      "url": "https://github.com/zai-org/glm-5",
+      "first_seen_utc": "2026-09-23T11:55:45.051276+00:00",
+      "status": "new",
+      "score": 80,
+      "tier": "$1M+",
+      "summary": "Frontier Chinese AI lab. Released GLM-5.3 open-source agentic coding model (Sep 2026). Competing with DeepSeek and Qwen.",
+      "do_fit": "GPU Droplets, Inference, Kubernetes",
+      "angle": "Major open-source model releases need global inference infrastructure \u2014 DO can be their Western cloud partner for model serving.",
+      "jev": null,
+      "signals": [
+        {
+          "date": "2026-09-23",
+          "type": "funding",
+          "detail": "Frontier Chinese AI lab. Released GLM-5.3 open-source agentic coding model (Sep 2026). Competing with DeepSeek and Qwen.",
+          "source_url": "https://github.com/zai-org/glm-5"
+        }
+      ]
+    },
+    {
       "company": "Stability AI",
       "url": "https://stability.ai",
       "first_seen_utc": "2026-09-22T00:00:00+00:00",
@@ -672,12 +962,6 @@
       },
       "signals": [
         {
-          "date": "2025-10-01",
-          "type": "partnership",
-          "detail": "Struck AI content partnerships with Universal Music and Electronic Arts for co-developing AI tools in creative workflows",
-          "source_url": "https://techcrunch.com/2026/08/25/stability-ai-maker-of-image-generator-stable-diffusion-raises-76-million-in-fresh-funding/"
-        },
-        {
           "date": "2026-08-25",
           "type": "strategy",
           "detail": "Expanding creative production product suite and professional services arm; largely prevailed in UK copyright lawsuit against Getty Images",
@@ -688,47 +972,12 @@
           "type": "funding",
           "detail": "Raised $76M Series B, bringing total to $232M; investors include Universal Music Group, Sony Music, Warner Music, EA, AMD Ventures",
           "source_url": "https://techcrunch.com/2026/08/25/stability-ai-maker-of-image-generator-stable-diffusion-raises-76-million-in-fresh-funding/"
-        }
-      ]
-    },
-    {
-      "company": "Mecka AI",
-      "url": "https://mecka.ai",
-      "first_seen_utc": "2026-09-22T00:00:00+00:00",
-      "status": "reported",
-      "score": 80,
-      "tier": "$1M+",
-      "summary": "Robotics training data infrastructure \u2014 captures human motion data to train humanoid robots. Sequoia leading new round at ~$500M valuation, 3 months after $60M raise. Projecting $100M ARR.",
-      "do_fit": "GPU Droplets, Spaces (data storage). Mecka collects and processes massive amounts of video/sensor data \u2014 GPU Droplets for data processing, Spaces for dataset storage and distribution.",
-      "angle": "Training humanoid robots generates petabytes of sensor data. DO GPU Droplets for processing pipelines, Spaces for dataset distribution \u2014 cost-effective infrastructure as you scale data collection globally.",
-      "jev": {
-        "tier": "1m_plus",
-        "confidence": 0.97
-      },
-      "signals": [
-        {
-          "date": "2026-06-01",
-          "type": "traction",
-          "detail": "Projecting $100M annual run rate by year-end 2026; 66 employees (+371% YoY); customers in robotics and autonomous vehicle sectors",
-          "source_url": "https://startupfortune.com/mecka-ai-turns-robot-training-data-into-a-startup-category/"
         },
         {
-          "date": "2026-09-11",
-          "type": "funding",
-          "detail": "Nearing ~$500M valuation in Sequoia-led round amid rush for robot training data",
-          "source_url": "https://techcrunch.com/2026/09/11/mecka-ai-nears-500m-valuation-in-sequoia-led-deal-amid-rush-for-robot-training-data/"
-        },
-        {
-          "date": "2026-09-11",
-          "type": "strategy",
-          "detail": "Positioned as 'Scale AI for robotics' \u2014 capturing egocentric human motion data for embodied AI training",
-          "source_url": "https://endroid.com/2026/mecka-ai-sequoia-500m-robot-data/"
-        },
-        {
-          "date": "2026-09-11",
-          "type": "funding",
-          "detail": "Sequoia Capital leading new round at ~$500M valuation; just 3 months after $60M Series A from Framework Ventures",
-          "source_url": "https://techcrunch.com/2026/09/11/mecka-ai-nears-500m-valuation-in-sequoia-led-deal-amid-rush-for-robot-training-data/"
+          "date": "2025-10-01",
+          "type": "partnership",
+          "detail": "Struck AI content partnerships with Universal Music and Electronic Arts for co-developing AI tools in creative workflows",
+          "source_url": "https://techcrunch.com/2026/08/25/stability-ai-maker-of-image-generator-stable-diffusion-raises-76-million-in-fresh-funding/"
         }
       ]
     },
@@ -748,12 +997,6 @@
       },
       "signals": [
         {
-          "date": "2026-06-12",
-          "type": "team",
-          "detail": "Hiring VP of Engineering (Infrastructure) \u2014 30-40% direct technical contribution expected; scaling open-access AI cloud",
-          "source_url": "https://jobs.ashbyhq.com/hyperbolic/c6039f86-4915-4d1d-9e10-ac7c2a484d5c"
-        },
-        {
           "date": "2026-09-14",
           "type": "traction",
           "detail": "250K+ engineers using platform; minutes-to-deploy GPU clusters; zero quota limits; no long-term lock-in",
@@ -764,76 +1007,32 @@
           "type": "partnership",
           "detail": "Integrated with Hugging Face for one-click model deployment; backed by Variant Fund, Polychain Capital, Chapter One",
           "source_url": "https://www.hyperbolic.xyz/"
+        },
+        {
+          "date": "2026-06-12",
+          "type": "team",
+          "detail": "Hiring VP of Engineering (Infrastructure) \u2014 30-40% direct technical contribution expected; scaling open-access AI cloud",
+          "source_url": "https://jobs.ashbyhq.com/hyperbolic/c6039f86-4915-4d1d-9e10-ac7c2a484d5c"
         }
       ]
     },
     {
-      "company": "Listen Labs",
-      "url": "https://listenlabs.ai",
-      "first_seen_utc": "2026-09-22T21:49:56.998021+00:00",
+      "company": "Odyssey Systems",
+      "url": "https://odyssey.systems/introducing-odyssey-3",
+      "first_seen_utc": "2026-09-23T11:55:45.051276+00:00",
       "status": "new",
       "score": 78,
-      "tier": "$100K+",
-      "summary": "Voice AI market research startup that automates customer interviews. ~$30M ARR, 3x larger than competitor Simile. Signed $125M Series C term sheet at $1.5B (Menlo Ventures), scrapped for Salesforce $2B acquisition talks. Customers: Microsoft, Canva, Anthropic, Sweetgreen.",
-      "do_fit": "GPU Droplets (voice AI/STT/TTS inference), Managed Databases, Kubernetes",
-      "angle": "Listen Labs runs real-time voice AI interviews for Microsoft and Anthropic at scale \u2014 that's latency-sensitive GPU inference. DigitalOcean GPU Droplets give you consistent pricing for voice workloads, without the per-minute markup hyperscalers charge for real-time AI.",
-      "jev": {
-        "tier": "1m_plus",
-        "confidence": 0.95
-      },
-      "signals": [
-        {
-          "date": "2026-09-09",
-          "type": "funding",
-          "detail": "Signed $125M Series C term sheet at $1.5B valuation led by Menlo Ventures; scrapped for Salesforce acquisition talks at ~$2B",
-          "source_url": "https://techcrunch.com/2026/09/09/ai-research-startup-listen-labs-scrubbed-a-1-5b-funding-round-for-salesforce-talks/"
-        },
-        {
-          "date": "2026-09-09",
-          "type": "traction",
-          "detail": "~$30M ARR; customers include Microsoft, Canva, Anthropic, Sweetgreen; 3x revenue of competitor Simile",
-          "source_url": "https://techcrunch.com/2026/09/09/ai-research-startup-listen-labs-scrubbed-a-1-5b-funding-round-for-salesforce-talks/"
-        },
-        {
-          "date": "2026-09-09",
-          "type": "investor",
-          "detail": "Previously raised $69M Series B at $500M led by Ribbit Capital; Sequoia, Conviction, Pear VC participated",
-          "source_url": "https://techcrunch.com/2026/09/09/ai-research-startup-listen-labs-scrubbed-a-1-5b-funding-round-for-salesforce-talks/"
-        }
-      ]
-    },
-    {
-      "company": "HappyRobot",
-      "url": "https://happyrobot.ai",
-      "first_seen_utc": "2026-09-22T00:00:00+00:00",
-      "status": "reported",
-      "score": 78,
       "tier": "$1M+",
-      "summary": "Enterprise AI agents for logistics, energy, telecoms, insurance; $1.2B valuation, 150+ enterprise customers including DHL, Uber, Repsol.",
-      "do_fit": "Kubernetes, Managed Databases, Managed Agents. Agentic enterprise workloads need reliable orchestration \u2014 DO Kubernetes + Managed DBs as the backend for agent fleets.",
-      "angle": "150 enterprise customers running agents across fragmented systems. DO Kubernetes for agent orchestration, Managed Databases for agent state \u2014 cost-effective at the scale you're hitting.",
-      "jev": {
-        "tier": "1m_plus",
-        "confidence": 0.99
-      },
+      "summary": "Foundation world models for physical intelligence (robotics, autonomous vehicles, drones). Launched Odyssey-3 model (Sep 2026). Founded 2023 by ex-Waymo/Cruise team.",
+      "do_fit": "GPU Droplets, Inference, Kubernetes",
+      "angle": "Robotics/autonomous vehicle simulation is GPU-intensive \u2014 DO's GPU Droplets provide accessible infrastructure for physical AI startups.",
+      "jev": null,
       "signals": [
         {
-          "date": "2026-08-04",
+          "date": "2026-09-23",
           "type": "funding",
-          "detail": "Raised $150M Series C at $1.2B valuation, led by Prysm Capital and Eurazeo; a16z, Base10, YC doubled down",
-          "source_url": "https://thenextweb.com/news/happyrobot-150m-series-c-enterprise-ai-agents"
-        },
-        {
-          "date": "2026-08-04",
-          "type": "investor",
-          "detail": "Strategics including Koch Disruptive, Orange, Deutsche Telekom T.Capital, Bankinter joined the round",
-          "source_url": "https://thenextweb.com/news/happyrobot-150m-series-c-enterprise-ai-agents"
-        },
-        {
-          "date": "2026-08-04",
-          "type": "traction",
-          "detail": "Revenue grew 5x since Series B (<1 year); 150+ enterprise customers; expanded from logistics into energy, telecoms, insurance, airlines",
-          "source_url": "https://thenextweb.com/news/happyrobot-150m-series-c-enterprise-ai-agents"
+          "detail": "Foundation world models for physical intelligence (robotics, autonomous vehicles, drones). Launched Odyssey-3 model (Sep 2026). Founded 2023 by ex-Waymo/Cruise team.",
+          "source_url": "https://odyssey.systems/introducing-odyssey-3"
         }
       ]
     },
@@ -854,14 +1053,14 @@
       "signals": [
         {
           "date": "2026-09-21",
-          "type": "team",
-          "detail": "Hiring Head of Platform Engineering to own reliability, inference, autoscaling, and on-premise deployments; 3+ years platform scale experience required",
+          "type": "traction",
+          "detail": "1B+ pages processed monthly; 8x YoY revenue growth; customers include Harvey, Vanta, Scale, FAANG, top trading firms",
           "source_url": "https://emploive.com/jobs/4354992/head-of-platform-engineering-reducto"
         },
         {
           "date": "2026-09-21",
-          "type": "traction",
-          "detail": "1B+ pages processed monthly; 8x YoY revenue growth; customers include Harvey, Vanta, Scale, FAANG, top trading firms",
+          "type": "team",
+          "detail": "Hiring Head of Platform Engineering to own reliability, inference, autoscaling, and on-premise deployments; 3+ years platform scale experience required",
           "source_url": "https://emploive.com/jobs/4354992/head-of-platform-engineering-reducto"
         },
         {
@@ -873,37 +1072,124 @@
       ]
     },
     {
-      "company": "Snorkel AI",
-      "url": "https://snorkel.ai",
-      "first_seen_utc": "2026-09-22T21:06:55.262539+00:00",
+      "company": "HappyRobot",
+      "url": "https://happyrobot.ai",
+      "first_seen_utc": "2026-09-22T00:00:00+00:00",
       "status": "reported",
       "score": 78,
-      "tier": "$100K+",
-      "summary": "AI training data platform \u2014 agentic data development platform pairing human experts with thousands of specialized AI agents for dataset creation. $350M raise at $3.5B valuation, $350M ARR (from $20M a year ago). Backed by Insight Partners, S32, Greylock, Addition. Front-line AI infrastructure.",
-      "do_fit": "GPU Droplets, Kubernetes, Managed Databases. Snorkel runs thousands of specialized AI agents for data labeling and RL environment creation \u2014 needs scalable inference compute. DO GPU Droplets for the agent fleet inference.",
-      "angle": "Your platform runs thousands of AI agents creating training data. DO GPU Droplets as affordable inference capacity for the agent fleet \u2014 cost-effective at the scale youre hitting ($350M ARR running 18x more agents than a year ago).",
+      "tier": "$1M+",
+      "summary": "Enterprise AI agents for logistics, energy, telecoms, insurance; $1.2B valuation, 150+ enterprise customers including DHL, Uber, Repsol.",
+      "do_fit": "Kubernetes, Managed Databases, Managed Agents. Agentic enterprise workloads need reliable orchestration \u2014 DO Kubernetes + Managed DBs as the backend for agent fleets.",
+      "angle": "150 enterprise customers running agents across fragmented systems. DO Kubernetes for agent orchestration, Managed Databases for agent state \u2014 cost-effective at the scale you're hitting.",
       "jev": {
         "tier": "1m_plus",
-        "confidence": 1.0
+        "confidence": 0.99
       },
       "signals": [
         {
-          "date": "2026-09-22",
-          "type": "funding",
-          "detail": "Raised $350M at $3.5B valuation led by Insight Partners and S32; Greylock, Addition, Wells Fargo participated. ARR surged from $20M to $350M in one year.",
-          "source_url": "https://www.reuters.com/legal/transactional/snorkel-ai-valued-35-billion-amid-surging-demand-complex-ai-training-data-2026-09-22/"
-        },
-        {
-          "date": "2026-09-22",
-          "type": "product",
-          "detail": "Shifted from software to data-as-a-service. Pairs human domain experts with thousands of specialized AI models/agents to create and vet datasets. Tens of thousands of domain experts in network.",
-          "source_url": "https://www.channelnewsasia.com/business/exclusive-snorkel-ai-valued-35-billion-amid-surging-demand-complex-ai-training-data-6402476"
-        },
-        {
-          "date": "2026-09-22",
+          "date": "2026-08-04",
           "type": "traction",
-          "detail": "Revenue grew from ~$20M ARR to $350M ARR in 12 months. Expects profitability by end of 2026. Frontier AI labs demand increasingly complex training data.",
-          "source_url": "https://www.reuters.com/legal/transactional/snorkel-ai-valued-35-billion-amid-surging-demand-complex-ai-training-data-2026-09-22/"
+          "detail": "Revenue grew 5x since Series B (<1 year); 150+ enterprise customers; expanded from logistics into energy, telecoms, insurance, airlines",
+          "source_url": "https://thenextweb.com/news/happyrobot-150m-series-c-enterprise-ai-agents"
+        },
+        {
+          "date": "2026-08-04",
+          "type": "investor",
+          "detail": "Strategics including Koch Disruptive, Orange, Deutsche Telekom T.Capital, Bankinter joined the round",
+          "source_url": "https://thenextweb.com/news/happyrobot-150m-series-c-enterprise-ai-agents"
+        },
+        {
+          "date": "2026-08-04",
+          "type": "funding",
+          "detail": "Raised $150M Series C at $1.2B valuation, led by Prysm Capital and Eurazeo; a16z, Base10, YC doubled down",
+          "source_url": "https://thenextweb.com/news/happyrobot-150m-series-c-enterprise-ai-agents"
+        }
+      ]
+    },
+    {
+      "company": "Listen Labs",
+      "url": "https://listenlabs.ai",
+      "first_seen_utc": "2026-09-22T21:49:56.998021+00:00",
+      "status": "new",
+      "score": 78,
+      "tier": "$100K+",
+      "summary": "Voice AI market research startup that automates customer interviews. ~$30M ARR, 3x larger than competitor Simile. Signed $125M Series C term sheet at $1.5B (Menlo Ventures), scrapped for Salesforce $2B acquisition talks. Customers: Microsoft, Canva, Anthropic, Sweetgreen.",
+      "do_fit": "GPU Droplets (voice AI/STT/TTS inference), Managed Databases, Kubernetes",
+      "angle": "Listen Labs runs real-time voice AI interviews for Microsoft and Anthropic at scale \u2014 that's latency-sensitive GPU inference. DigitalOcean GPU Droplets give you consistent pricing for voice workloads, without the per-minute markup hyperscalers charge for real-time AI.",
+      "jev": {
+        "tier": "1m_plus",
+        "confidence": 0.95
+      },
+      "signals": [
+        {
+          "date": "2026-09-09",
+          "type": "traction",
+          "detail": "~$30M ARR; customers include Microsoft, Canva, Anthropic, Sweetgreen; 3x revenue of competitor Simile",
+          "source_url": "https://techcrunch.com/2026/09/09/ai-research-startup-listen-labs-scrubbed-a-1-5b-funding-round-for-salesforce-talks/"
+        },
+        {
+          "date": "2026-09-09",
+          "type": "investor",
+          "detail": "Previously raised $69M Series B at $500M led by Ribbit Capital; Sequoia, Conviction, Pear VC participated",
+          "source_url": "https://techcrunch.com/2026/09/09/ai-research-startup-listen-labs-scrubbed-a-1-5b-funding-round-for-salesforce-talks/"
+        },
+        {
+          "date": "2026-09-09",
+          "type": "funding",
+          "detail": "Signed $125M Series C term sheet at $1.5B valuation led by Menlo Ventures; scrapped for Salesforce acquisition talks at ~$2B",
+          "source_url": "https://techcrunch.com/2026/09/09/ai-research-startup-listen-labs-scrubbed-a-1-5b-funding-round-for-salesforce-talks/"
+        }
+      ]
+    },
+    {
+      "company": "Nuance Labs",
+      "url": "https://nuancelabs.ai",
+      "first_seen_utc": "2026-09-22T00:00:00+00:00",
+      "status": "watching",
+      "score": 78,
+      "tier": "$100K+",
+      "summary": "Foundation model for human conversation and expression. $50M Series A (Sep 2026).",
+      "do_fit": "GPU Droplets, Inference, Kubernetes",
+      "angle": "Conversational AI model company \u2014 DO's Inference Engine can serve their models with competitive latency and cost.",
+      "jev": null,
+      "signals": [
+        {
+          "date": "2026-09-23",
+          "type": "funding",
+          "detail": "$50M Series A (Sep 2026)",
+          "source_url": "https://www.nuancelabs.ai/nuance-labs-series-a-release"
+        },
+        {
+          "date": "2026-09-17",
+          "type": "product",
+          "detail": "Building full-duplex foundation model for real-time audiovisual AI \u2014 deployed for sales, customer service, coaching, education",
+          "source_url": "https://www.thesaasnews.com/news/nuance-labs-raises-50m-series-a/"
+        },
+        {
+          "date": "2026-09-17",
+          "type": "funding",
+          "detail": "Raised $50M Series A led by Lightspeed; NVIDIA, Accel, South Park Commons, Define Ventures joined; total $60M",
+          "source_url": "https://www.thesaasnews.com/news/nuance-labs-raises-50m-series-a/"
+        }
+      ]
+    },
+    {
+      "company": "IFM (Institute of Foundation Models)",
+      "url": "https://ifm.ai/blog/k2/",
+      "first_seen_utc": "2026-09-23T11:55:45.051276+00:00",
+      "status": "new",
+      "score": 76,
+      "tier": "$1M+",
+      "summary": "Open-source foundation model company. Released K2 Horizon fleet (6 models, 375B to 0.9B params, Apache 2.0, Sep 3 2026). Most comprehensive open model release.",
+      "do_fit": "GPU Droplets, Inference, Spaces",
+      "angle": "Open-source model company needs cost-effective serving \u2014 DO's Inference Engine optimized for open-weight models at scale.",
+      "jev": null,
+      "signals": [
+        {
+          "date": "2026-09-23",
+          "type": "funding",
+          "detail": "Open-source foundation model company. Released K2 Horizon fleet (6 models, 375B to 0.9B params, Apache 2.0, Sep 3 2026). Most comprehensive open model release.",
+          "source_url": "https://ifm.ai/blog/k2/"
         }
       ]
     },
@@ -930,15 +1216,15 @@
         },
         {
           "date": "2026-09-01",
-          "type": "funding",
-          "detail": "Raised $40M Series A at $200M+ valuation, co-led by Marathon and Chemistry; AMD Ventures invested; rejected multiple acquisition offers",
-          "source_url": "https://www.kucoin.com/news/flash/ai-startup-wafer-rejects-acquisition-offers-raises-40m-at-200m-valuation"
-        },
-        {
-          "date": "2026-09-01",
           "type": "product",
           "detail": "AMD MI355X pushed to ~80% of NVIDIA B200 throughput at <half cost for certain models; most GPUs in production at ~20% utilization",
           "source_url": "https://www.wing.vc/content/investing-in-wafer"
+        },
+        {
+          "date": "2026-09-01",
+          "type": "funding",
+          "detail": "Raised $40M Series A at $200M+ valuation, co-led by Marathon and Chemistry; AMD Ventures invested; rejected multiple acquisition offers",
+          "source_url": "https://www.kucoin.com/news/flash/ai-startup-wafer-rejects-acquisition-offers-raises-40m-at-200m-valuation"
         }
       ]
     },
@@ -959,6 +1245,12 @@
       "signals": [
         {
           "date": "2026-09-08",
+          "type": "traction",
+          "detail": "270M+ transactions, 100,000+ agent runs per day; 11 months from founding to Series A",
+          "source_url": "https://www.sapiom.ai/resources/blog/the-next-trillion-agents/"
+        },
+        {
+          "date": "2026-09-08",
           "type": "product",
           "detail": "Real-time model/tool routing at execution point; typed agents that pause/resume; full audit trail",
           "source_url": "https://www.sapiom.ai/products/runtime/"
@@ -968,76 +1260,6 @@
           "type": "funding",
           "detail": "Raised $35M Series A led by Dragonfly; Accel, Coinbase Ventures, Menlo Ventures, Anthropic participated; total $50M funding",
           "source_url": "https://svdaily.com/2026/09/08/sapiom-scores-35-million-for-ai-agents/"
-        },
-        {
-          "date": "2026-09-08",
-          "type": "traction",
-          "detail": "270M+ transactions, 100,000+ agent runs per day; 11 months from founding to Series A",
-          "source_url": "https://www.sapiom.ai/resources/blog/the-next-trillion-agents/"
-        }
-      ]
-    },
-    {
-      "company": "Arcee AI",
-      "url": "https://arcee.ai",
-      "first_seen_utc": "2026-09-22T18:57:47.682546+00:00",
-      "status": "reported",
-      "score": 76,
-      "tier": "$100K+",
-      "summary": "US-based frontier open-weight AI model developer. Raised ~$150M Series B at $1B+ valuation, backed by Vista Equity, Emergence Capital, Microsoft M12. Trained entire Trinity model family (including 400B MoE) for ~$20M. Working with U.S. Department of Energy.",
-      "do_fit": "GPU Droplets/Bare Metal, Kubernetes. Arcee trains and deploys open-weight models \u2014 enterprise customers need GPU compute to run these models on their own infra. DO as the deployment target for enterprises running Trinity models.",
-      "angle": "Enterprises using your open models need somewhere to run them. DO GPU Droplets as the default deployment infrastructure for Trinity model users \u2014 open models + open-ish cloud = a natural fit for the cost-sensitive enterprise segment.",
-      "jev": {
-        "tier": "1m_plus",
-        "confidence": 0.99
-      },
-      "signals": [
-        {
-          "date": "2026-09-16",
-          "type": "funding",
-          "detail": "Raised ~$150M Series B at $1B+ valuation led by Vista Equity Partners, Cambium Capital, Emergence Capital; Microsoft M12, Hitachi, Wipro participated.",
-          "source_url": "https://www.arcee.ai/blog/arcee-ai-raises-series-b-to-build-the-future-of-american-open-models"
-        },
-        {
-          "date": "2026-09-16",
-          "type": "traction",
-          "detail": "Trained entire 2025 model lineup including 400B-parameter Trinity Large MoE for ~$20M total. Partnerships with U.S. Department of Energy and national labs.",
-          "source_url": "https://fortune.com/2026/09/16/arcee-ai-trained-four-models-for-20-million-now-its-worth-1-billion/"
-        }
-      ]
-    },
-    {
-      "company": "Go.AI",
-      "url": "https://go.ai",
-      "first_seen_utc": "2026-09-22T00:00:00+00:00",
-      "status": "reported",
-      "score": 76,
-      "tier": "$100K+",
-      "summary": "On-prem AI infrastructure for regulated industries (finance, healthcare, defense); 200+ customers, 8x ARR growth, profitable. $85M Series A led by Updata, $90M total.",
-      "do_fit": "GPU Droplets, Kubernetes, Managed Databases. While Go.AI focuses on on-prem, their customers need hybrid cloud \u2014 DO for dev/test, DR, or overflow capacity.",
-      "angle": "You're bringing AI to regulated industries on-prem. DO serves as the hybrid cloud layer \u2014 dev/test environments, DR, and burst capacity when on-prem hits limits.",
-      "jev": {
-        "tier": "1m_plus",
-        "confidence": 0.34
-      },
-      "signals": [
-        {
-          "date": "2026-09-22",
-          "type": "traction",
-          "detail": "200+ customers across financial services, healthcare, aerospace, defense, manufacturing; 12.5M+ queries/day; 8x ARR growth YoY, profitable",
-          "source_url": "https://www.financialcontent.com/article/bizwire-2026-9-22-goai-raises-85-million-series-a-to-accelerate-on-prem-ai-infrastructure-for-regulated-industries"
-        },
-        {
-          "date": "2026-09-22",
-          "type": "funding",
-          "detail": "Raised $85M Series A led by Updata Partners; total $90M funding. 200+ customers, 12.5M+ daily queries, 8x ARR YoY, profitable.",
-          "source_url": "https://www.financialcontent.com/article/bizwire-2026-9-22-goai-raises-85-million-series-a-to-accelerate-on-prem-ai-infrastructure-for-regulated-industries"
-        },
-        {
-          "date": "2026-09-22",
-          "type": "funding",
-          "detail": "Raised $85M Series A led by Updata Partners; total $90M funding",
-          "source_url": "https://www.financialcontent.com/article/bizwire-2026-9-22-goai-raises-85-million-series-a-to-accelerate-on-prem-ai-infrastructure-for-regulated-industries"
         }
       ]
     },
@@ -1057,86 +1279,74 @@
       },
       "signals": [
         {
-          "date": "2026-06-24",
-          "type": "funding",
-          "detail": "Raised $100M growth round led by Summit Partners at $1B valuation; $240M ARR",
-          "source_url": "https://valueaddvc.com/pulse/runpod-100m-series-a-1b-valuation-2026"
-        },
-        {
           "date": "2026-08-25",
           "type": "traction",
           "detail": "Crossed 1M+ developers; Serverless platform handled 10B+ requests; turned down $500M+ buyout offers",
           "source_url": "https://www.runpod.io/blog/one-million-developers"
-        }
-      ]
-    },
-    {
-      "company": "TypeSafe AI",
-      "url": "https://typesafe.ai",
-      "first_seen_utc": "2026-09-22T00:00:00+00:00",
-      "status": "reported",
-      "score": 72,
-      "tier": "$100K+",
-      "summary": "Frontier AI lab building machine-native, composable AI. Launched Jev, a non-LLM 'System One' model for structured decision-making that's 193x faster and 444x cheaper than frontier LLMs. $40M seed led by DCVC at ~$200M valuation. Founded by co-inventor of RLHF/ChatGPT.",
-      "do_fit": "GPU Droplets, Kubernetes. Jev runs as a deployable model in production software stacks \u2014 DO GPU Droplets as inference endpoints for Jev deployments at enterprise scale.",
-      "angle": "Jev replaces expensive LLM calls with structured decisions. DO GPU Droplets as cost-effective inference endpoints for Jev at scale \u2014 especially for mid-market enterprises adopting agentic pipelines.",
-      "jev": {
-        "tier": "1m_plus",
-        "confidence": 0.32
-      },
-      "signals": [
-        {
-          "date": "2026-09-15",
-          "type": "product",
-          "detail": "Launched Jev, first System One model: returns typed calibrated decisions (choice/score/yes-no) instead of text. 193.6x faster, 444.6x cheaper than frontier LLMs.",
-          "source_url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev"
         },
         {
-          "date": "2026-09-15",
+          "date": "2026-06-24",
           "type": "funding",
-          "detail": "Raised $40M seed led by DCVC; exited stealth with launch of Jev model. Founded by Diogo Almeida (co-inventor of RLHF/ChatGPT at OpenAI).",
-          "source_url": "https://www.businesswire.com/news/home/20260915525333/en/TypeSafe-AI-Emerges-From-Stealth-With-$40M-in-Funding-With-New-Model-for-Composable-AI"
-        },
-        {
-          "date": "2026-09-16",
-          "type": "traction",
-          "detail": "Valued at ~$200M; Jev available in early access with waitlist; positioned as a composable software primitive for agent pipelines",
-          "source_url": "https://siliconangle.com/2026/09/16/typesafe-ai-exits-stealth-with-40m-to-build-ai-for-use-by-software/"
+          "detail": "Raised $100M growth round led by Summit Partners at $1B valuation; $240M ARR",
+          "source_url": "https://valueaddvc.com/pulse/runpod-100m-series-a-1b-valuation-2026"
         }
       ]
     },
     {
-      "company": "Kog",
-      "url": "https://kog.ai",
-      "first_seen_utc": "2026-09-22T21:49:56.998021+00:00",
+      "company": "Neysa",
+      "url": "https://exa.ai/library/person/8rdzd95071b",
+      "first_seen_utc": "2026-09-23T11:55:45.051276+00:00",
       "status": "new",
-      "score": 72,
-      "tier": "$100K+",
-      "summary": "French GPU inference optimization startup building Kog Inference Engine for 10-30x faster LLM decoding on standard GPUs (AMD MI300X, Nvidia H200). 200+ business leads from HN launch. 11-person team. Backed by Varsity VC, Scaleway, Bpifrance, French Tech 2030.",
-      "do_fit": "GPU Droplets (Kog's software could dramatically improve DO GPU utilization for customers), Bare Metal",
-      "angle": "Kog's inference engine could 10x the throughput of DigitalOcean GPU Droplets \u2014 making DO's GPU offering dramatically more cost-effective than hyperscaler equivalents. A partnership or integration would be a competitive moat for DO's AI infrastructure.",
-      "jev": {
-        "tier": "100k_plus",
-        "confidence": 0.51
-      },
+      "score": 74,
+      "tier": "$1M+",
+      "summary": "Sovereign AI cloud platform (India). GPU/K8s infrastructure. $649.9M total funding. 90-100 employees. Hiring VP Infrastructure.",
+      "do_fit": "GPU Droplets, Kubernetes, Managed Databases",
+      "angle": "Sovereign cloud operator scaling fast \u2014 DO can be their Western infrastructure partner or benchmark for GPU economics.",
+      "jev": null,
       "signals": [
         {
-          "date": "2026-08-14",
-          "type": "strategy",
-          "detail": "Backed by Varsity VC, Scaleway, Bpifrance, French Tech 2030; France's push for sovereign AI capability adds tailwinds",
-          "source_url": "https://techcrunch.com/2026/08/14/kog-is-going-deeper-to-squeeze-more-inference-out-of-gpus/"
+          "date": "2026-09-23",
+          "type": "funding",
+          "detail": "Sovereign AI cloud platform (India). GPU/K8s infrastructure. $649.9M total funding. 90-100 employees. Hiring VP Infrastructure.",
+          "source_url": "https://exa.ai/library/person/8rdzd95071b"
+        }
+      ]
+    },
+    {
+      "company": "Raindrop",
+      "url": "https://raindrop.ai",
+      "first_seen_utc": "2026-09-22T00:00:00+00:00",
+      "status": "watching",
+      "score": 72,
+      "tier": "$100K+",
+      "summary": "AI agent failure protection and security. $50M total funding with new Series A (Sep 17 2026).",
+      "do_fit": "Kubernetes, Managed Agents, Managed Databases",
+      "angle": "Agent security platform \u2014 DO's Managed Agents can integrate Raindrop's protection layer for DO customers.",
+      "jev": null,
+      "signals": [
+        {
+          "date": "2026-09-23",
+          "type": "funding",
+          "detail": "$50M total funding; Series A (Sep 17 2026)",
+          "source_url": "https://www.raindrop.ai/blog/series-a/"
         },
         {
-          "date": "2026-08-14",
-          "type": "product",
-          "detail": "Kog Inference Engine demo: 3,000 tokens/sec on Laneformer 2B via software optimization on AMD MI300X; promising 10-30x faster LLM inference on existing GPUs",
-          "source_url": "https://techcrunch.com/2026/08/14/kog-is-going-deeper-to-squeeze-more-inference-out-of-gpus/"
-        },
-        {
-          "date": "2026-08-14",
+          "date": "2026-09-17",
           "type": "traction",
-          "detail": "HN front page launch generated 200+ tangible business leads; software engineering identified as first use case target",
-          "source_url": "https://techcrunch.com/2026/08/14/kog-is-going-deeper-to-squeeze-more-inference-out-of-gpus/"
+          "detail": "Trusted by Vercel, Framer, Clay, and Fortune 100 enterprises; processes billions of traces/month",
+          "source_url": "https://thenextweb.com/news/raindrop-series-a-50m-crv-agent-failures-simulations"
+        },
+        {
+          "date": "2026-09-17",
+          "type": "product",
+          "detail": "Launched Simulations \u2014 replays production traffic against proposed agent changes on every PR, catches unexpected behaviors before deployment",
+          "source_url": "https://www.raindrop.ai/blog/series-a/"
+        },
+        {
+          "date": "2026-09-17",
+          "type": "funding",
+          "detail": "Raised Series A led by CRV, bringing total to $50M; Lightspeed, YC, and researchers from OpenAI/Anthropic/Thinking Machines participated",
+          "source_url": "https://www.raindrop.ai/blog/series-a/"
         }
       ]
     },
@@ -1157,15 +1367,105 @@
       "signals": [
         {
           "date": "2026-09-15",
+          "type": "product",
+          "detail": "Nonstop AI Data Interface: 10x lower latency, 10x higher efficiency for agentic inference networks; targeting 300x token demand growth by 2030",
+          "source_url": "https://www.prnewswire.com/news-releases/delos-data-closes-over-100-million-to-deliver-delos-nonstop-ai-for-faster-stronger-more-efficient-ai-capacity-302879199.html"
+        },
+        {
+          "date": "2026-09-15",
           "type": "funding",
           "detail": "Raised $100M+ from Matrix, Playground, Socratic Partners, Capricorn, Matter Venture Partners",
           "source_url": "https://www.delosdata.com/newsroom/delos-data-closes-over-100-million-to-deliver-delos-nonstop-aitm-for-faster-stronger-more-efficient-ai-capacity"
+        }
+      ]
+    },
+    {
+      "company": "Kog",
+      "url": "https://kog.ai",
+      "first_seen_utc": "2026-09-22T21:49:56.998021+00:00",
+      "status": "new",
+      "score": 72,
+      "tier": "$100K+",
+      "summary": "French GPU inference optimization startup building Kog Inference Engine for 10-30x faster LLM decoding on standard GPUs (AMD MI300X, Nvidia H200). 200+ business leads from HN launch. 11-person team. Backed by Varsity VC, Scaleway, Bpifrance, French Tech 2030.",
+      "do_fit": "GPU Droplets (Kog's software could dramatically improve DO GPU utilization for customers), Bare Metal",
+      "angle": "Kog's inference engine could 10x the throughput of DigitalOcean GPU Droplets \u2014 making DO's GPU offering dramatically more cost-effective than hyperscaler equivalents. A partnership or integration would be a competitive moat for DO's AI infrastructure.",
+      "jev": {
+        "tier": "100k_plus",
+        "confidence": 0.51
+      },
+      "signals": [
+        {
+          "date": "2026-08-14",
+          "type": "traction",
+          "detail": "HN front page launch generated 200+ tangible business leads; software engineering identified as first use case target",
+          "source_url": "https://techcrunch.com/2026/08/14/kog-is-going-deeper-to-squeeze-more-inference-out-of-gpus/"
+        },
+        {
+          "date": "2026-08-14",
+          "type": "strategy",
+          "detail": "Backed by Varsity VC, Scaleway, Bpifrance, French Tech 2030; France's push for sovereign AI capability adds tailwinds",
+          "source_url": "https://techcrunch.com/2026/08/14/kog-is-going-deeper-to-squeeze-more-inference-out-of-gpus/"
+        },
+        {
+          "date": "2026-08-14",
+          "type": "product",
+          "detail": "Kog Inference Engine demo: 3,000 tokens/sec on Laneformer 2B via software optimization on AMD MI300X; promising 10-30x faster LLM inference on existing GPUs",
+          "source_url": "https://techcrunch.com/2026/08/14/kog-is-going-deeper-to-squeeze-more-inference-out-of-gpus/"
+        }
+      ]
+    },
+    {
+      "company": "TypeSafe AI",
+      "url": "https://typesafe.ai",
+      "first_seen_utc": "2026-09-22T00:00:00+00:00",
+      "status": "reported",
+      "score": 72,
+      "tier": "$100K+",
+      "summary": "Frontier AI lab building machine-native, composable AI. Launched Jev, a non-LLM 'System One' model for structured decision-making that's 193x faster and 444x cheaper than frontier LLMs. $40M seed led by DCVC at ~$200M valuation. Founded by co-inventor of RLHF/ChatGPT.",
+      "do_fit": "GPU Droplets, Kubernetes. Jev runs as a deployable model in production software stacks \u2014 DO GPU Droplets as inference endpoints for Jev deployments at enterprise scale.",
+      "angle": "Jev replaces expensive LLM calls with structured decisions. DO GPU Droplets as cost-effective inference endpoints for Jev at scale \u2014 especially for mid-market enterprises adopting agentic pipelines.",
+      "jev": {
+        "tier": "1m_plus",
+        "confidence": 0.32
+      },
+      "signals": [
+        {
+          "date": "2026-09-16",
+          "type": "traction",
+          "detail": "Valued at ~$200M; Jev available in early access with waitlist; positioned as a composable software primitive for agent pipelines",
+          "source_url": "https://siliconangle.com/2026/09/16/typesafe-ai-exits-stealth-with-40m-to-build-ai-for-use-by-software/"
         },
         {
           "date": "2026-09-15",
           "type": "product",
-          "detail": "Nonstop AI Data Interface: 10x lower latency, 10x higher efficiency for agentic inference networks; targeting 300x token demand growth by 2030",
-          "source_url": "https://www.prnewswire.com/news-releases/delos-data-closes-over-100-million-to-deliver-delos-nonstop-ai-for-faster-stronger-more-efficient-ai-capacity-302879199.html"
+          "detail": "Launched Jev, first System One model: returns typed calibrated decisions (choice/score/yes-no) instead of text. 193.6x faster, 444.6x cheaper than frontier LLMs.",
+          "source_url": "https://typesafe.ai/blog/introducing-system-one-models-and-jev"
+        },
+        {
+          "date": "2026-09-15",
+          "type": "funding",
+          "detail": "Raised $40M seed led by DCVC; exited stealth with launch of Jev model. Founded by Diogo Almeida (co-inventor of RLHF/ChatGPT at OpenAI).",
+          "source_url": "https://www.businesswire.com/news/home/20260915525333/en/TypeSafe-AI-Emerges-From-Stealth-With-$40M-in-Funding-With-New-Model-for-Composable-AI"
+        }
+      ]
+    },
+    {
+      "company": "Cyera",
+      "url": "https://thenextweb.com/news/cyera-400m-goldman-sachs-series-g-extension",
+      "first_seen_utc": "2026-09-23T11:55:45.051276+00:00",
+      "status": "new",
+      "score": 72,
+      "tier": "$1M+",
+      "summary": "Data security platform for AI agents. $12B+ valuation. Raised $400M Series G extension (Goldman Sachs, Sep 2026). $1.4B raised in 2026 alone.",
+      "do_fit": "Kubernetes, Managed Databases, Managed Agents",
+      "angle": "AI security platform at massive scale \u2014 DO's Managed Agents and Kubernetes can host their security agent infrastructure.",
+      "jev": null,
+      "signals": [
+        {
+          "date": "2026-09-23",
+          "type": "funding",
+          "detail": "Data security platform for AI agents. $12B+ valuation. Raised $400M Series G extension (Goldman Sachs, Sep 2026). $1.4B raised in 2026 alone.",
+          "source_url": "https://thenextweb.com/news/cyera-400m-goldman-sachs-series-g-extension"
         }
       ]
     },
@@ -1186,15 +1486,50 @@
       "signals": [
         {
           "date": "2026-09-01",
-          "type": "funding",
-          "detail": "Raised $21M seed from Sequoia Capital, S32, Canapi, Alumni Ventures; incubated inside Sequoia",
-          "source_url": "https://techcrunch.com/2026/09/01/sequoia-incubated-empirik-launches-with-21m-to-predict-outages-before-they-happen/"
-        },
-        {
-          "date": "2026-09-01",
           "type": "product",
           "detail": "First AI agent for infrastructure change management; predicts impact of infra changes before execution, prevents unsafe changes",
           "source_url": "https://www.prnewswire.com/news-releases/empirikai-emerges-from-stealth-with-21-million-to-build-the-ai-agent-for-infrastructure-change-302867970.html"
+        },
+        {
+          "date": "2026-09-01",
+          "type": "funding",
+          "detail": "Raised $21M seed from Sequoia Capital, S32, Canapi, Alumni Ventures; incubated inside Sequoia",
+          "source_url": "https://techcrunch.com/2026/09/01/sequoia-incubated-empirik-launches-with-21m-to-predict-outages-before-they-happen/"
+        }
+      ]
+    },
+    {
+      "company": "Pathway",
+      "url": "https://pathway.com",
+      "first_seen_utc": "2026-09-22T00:00:00+00:00",
+      "status": "reported",
+      "score": 70,
+      "tier": "$100K+",
+      "summary": "Frontier AI lab developing post-Transformer model architectures (BDH/Baby Dragon Hatchling). 150M-parameter model scored 29.5% on ARC-AGI-1 at $0.0007/task (11x cheaper than GPT-5.6). $30M seed at $500M valuation. CPO from Google DeepMind Gemini team.",
+      "do_fit": "GPU Droplets/Bare Metal. Pathway is procuring NVIDIA GB300 systems for model development \u2014 needs GPU compute for training post-Transformer models. DO as cost-effective training and inference infrastructure.",
+      "angle": "You're betting on post-Transformer architectures. DO GPU Droplets as affordable training compute for your BDH model family \u2014 non-hyperscaler pricing that aligns with your efficiency thesis.",
+      "jev": {
+        "tier": "1m_plus",
+        "confidence": 0.51
+      },
+      "signals": [
+        {
+          "date": "2026-08-12",
+          "type": "team",
+          "detail": "Adam Kurzrok joined as CPO (formerly Group Product Manager for Gemini at Google DeepMind); formalized advisory group including \u0141ukasz Kaiser",
+          "source_url": "https://pathway.com/blog/pathway-strikes-a-500m-valuation"
+        },
+        {
+          "date": "2026-08-11",
+          "type": "product",
+          "detail": "BDH-CQ scored 29.5% on ARC-AGI-1 at $0.0007/task \u2014 11x cheaper than GPT-5.6 Luna (Low). Post-Transformer architecture with persistent recurrent memory, no chain-of-thought needed.",
+          "source_url": "https://www.cnbctv18.com/business/startup/ai-startup-pathway-raises-funding-at-500-million-valuation-says-its-model-can-reason-at-lower-cost-19968804.htm"
+        },
+        {
+          "date": "2026-08-11",
+          "type": "funding",
+          "detail": "Raised additional capital bringing total seed to $30M at $500M valuation. Backed by Id4 Ventures, TQ Ventures, Kadmos Capital, Jonathan Frankle (Databricks Chief AI Scientist).",
+          "source_url": "https://pathway.com/blog/pathway-strikes-a-500m-valuation"
         }
       ]
     },
@@ -1215,14 +1550,14 @@
       "signals": [
         {
           "date": "2026-09-16",
-          "type": "team",
-          "detail": "Founded May 2026 by Vishal Sikka (ex-Infosys CEO, ex-VianAI founder); CTO Sanjay Rajagopalan; 20-25 employees across US, Middle East, Australia",
+          "type": "traction",
+          "detail": "Multiple seven-figure contracts; pursuing eight-figure deals; 21 enterprise prospects; customers: Fresenius Kabi, Saudi Aramco, Siemens Energy",
           "source_url": "https://techcrunch.com/2026/09/16/former-infosys-chiefs-ai-startup-adds-50m-to-seed-weeks-after-initial-raise/"
         },
         {
           "date": "2026-09-16",
-          "type": "traction",
-          "detail": "Multiple seven-figure contracts; pursuing eight-figure deals; 21 enterprise prospects; customers: Fresenius Kabi, Saudi Aramco, Siemens Energy",
+          "type": "team",
+          "detail": "Founded May 2026 by Vishal Sikka (ex-Infosys CEO, ex-VianAI founder); CTO Sanjay Rajagopalan; 20-25 employees across US, Middle East, Australia",
           "source_url": "https://techcrunch.com/2026/09/16/former-infosys-chiefs-ai-startup-adds-50m-to-seed-weeks-after-initial-raise/"
         },
         {
@@ -1234,107 +1569,60 @@
       ]
     },
     {
-      "company": "Pathway",
-      "url": "https://pathway.com",
-      "first_seen_utc": "2026-09-22T00:00:00+00:00",
-      "status": "reported",
+      "company": "Sequen",
+      "url": "https://www.prysmcapital.com/news/why-we-invested-in-sequen-the-ranking-layer-enterprises-didnt-know-they-needed",
+      "first_seen_utc": "2026-09-23T11:55:45.051276+00:00",
+      "status": "new",
       "score": 70,
-      "tier": "$100K+",
-      "summary": "Frontier AI lab developing post-Transformer model architectures (BDH/Baby Dragon Hatchling). 150M-parameter model scored 29.5% on ARC-AGI-1 at $0.0007/task (11x cheaper than GPT-5.6). $30M seed at $500M valuation. CPO from Google DeepMind Gemini team.",
-      "do_fit": "GPU Droplets/Bare Metal. Pathway is procuring NVIDIA GB300 systems for model development \u2014 needs GPU compute for training post-Transformer models. DO as cost-effective training and inference infrastructure.",
-      "angle": "You're betting on post-Transformer architectures. DO GPU Droplets as affordable training compute for your BDH model family \u2014 non-hyperscaler pricing that aligns with your efficiency thesis.",
-      "jev": {
-        "tier": "1m_plus",
-        "confidence": 0.51
-      },
+      "tier": "$1M+",
+      "summary": "AI ranking/recommendation layer for enterprise search and discovery. Series B led by Prysm Capital (Sep 10 2026).",
+      "do_fit": "Kubernetes, Managed Databases, Inference",
+      "angle": "Enterprise AI search needs scalable inference infrastructure \u2014 DO's platform provides managed K8s and DB for ranking workloads.",
+      "jev": null,
       "signals": [
         {
-          "date": "2026-08-11",
+          "date": "2026-09-23",
           "type": "funding",
-          "detail": "Raised additional capital bringing total seed to $30M at $500M valuation. Backed by Id4 Ventures, TQ Ventures, Kadmos Capital, Jonathan Frankle (Databricks Chief AI Scientist).",
-          "source_url": "https://pathway.com/blog/pathway-strikes-a-500m-valuation"
-        },
-        {
-          "date": "2026-08-11",
-          "type": "product",
-          "detail": "BDH-CQ scored 29.5% on ARC-AGI-1 at $0.0007/task \u2014 11x cheaper than GPT-5.6 Luna (Low). Post-Transformer architecture with persistent recurrent memory, no chain-of-thought needed.",
-          "source_url": "https://www.cnbctv18.com/business/startup/ai-startup-pathway-raises-funding-at-500-million-valuation-says-its-model-can-reason-at-lower-cost-19968804.htm"
-        },
-        {
-          "date": "2026-08-12",
-          "type": "team",
-          "detail": "Adam Kurzrok joined as CPO (formerly Group Product Manager for Gemini at Google DeepMind); formalized advisory group including \u0141ukasz Kaiser",
-          "source_url": "https://pathway.com/blog/pathway-strikes-a-500m-valuation"
+          "detail": "AI ranking/recommendation layer for enterprise search and discovery. Series B led by Prysm Capital (Sep 10 2026).",
+          "source_url": "https://www.prysmcapital.com/news/why-we-invested-in-sequen-the-ranking-layer-enterprises-didnt-know-they-needed"
         }
       ]
     },
     {
-      "company": "Raindrop",
-      "url": "https://raindrop.ai",
+      "company": "Comp AI",
+      "url": "https://trycomp.ai",
       "first_seen_utc": "2026-09-22T00:00:00+00:00",
-      "status": "reported",
-      "score": 68,
+      "status": "watching",
+      "score": 70,
       "tier": "$100K+",
-      "summary": "AI agent reliability platform \u2014 monitors agents in production for hallucinations, tool misuse, and behavior changes. $50M total funding from CRV. Trusted by Vercel, Framer, Clay, Fortune 100.",
-      "do_fit": "Kubernetes, Managed Databases. Raindrop's monitoring platform needs cloud infrastructure \u2014 DO Kubernetes as a managed deployment target for enterprises deploying Raindrop in their stack.",
-      "angle": "Enterprises trust you to catch agent failures before users notice. DO Kubernetes as a managed, SOC 2-certified deployment target for your monitoring platform \u2014 especially for mid-market enterprises.",
-      "jev": {
-        "tier": "1m_plus",
-        "confidence": 0.88
-      },
+      "summary": "Agentic AI for continuous compliance & cybersecurity. $34M Series A (Sep 17 2026).",
+      "do_fit": "Kubernetes, Managed Databases, App Platform",
+      "angle": "AI compliance platform \u2014 DO can host their agentic compliance infrastructure on managed K8s.",
+      "jev": null,
       "signals": [
         {
-          "date": "2026-09-17",
+          "date": "2026-09-23",
           "type": "funding",
-          "detail": "Raised Series A led by CRV, bringing total to $50M; Lightspeed, YC, and researchers from OpenAI/Anthropic/Thinking Machines participated",
-          "source_url": "https://www.raindrop.ai/blog/series-a/"
+          "detail": "$34M Series A (Sep 17 2026)",
+          "source_url": "https://www.trycomp.ai/press/series-a"
         },
         {
           "date": "2026-09-17",
           "type": "traction",
-          "detail": "Trusted by Vercel, Framer, Clay, and Fortune 100 enterprises; processes billions of traces/month",
-          "source_url": "https://thenextweb.com/news/raindrop-series-a-50m-crv-agent-failures-simulations"
+          "detail": "15x ARR growth YoY; customers include Corgi, Dub, OpenCode, Inference, Primer; helps companies become compliant in days, not quarters",
+          "source_url": "https://www.trycomp.ai/press/series-a"
         },
         {
           "date": "2026-09-17",
-          "type": "product",
-          "detail": "Launched Simulations \u2014 replays production traffic against proposed agent changes on every PR, catches unexpected behaviors before deployment",
-          "source_url": "https://www.raindrop.ai/blog/series-a/"
-        }
-      ]
-    },
-    {
-      "company": "Keenable",
-      "url": "https://keenable.com",
-      "first_seen_utc": "2026-09-22T00:00:00+00:00",
-      "status": "reported",
-      "score": 68,
-      "tier": "$100K+",
-      "summary": "Building a web search index of 100B+ documents optimized for AI agents, not humans. Accel-led $26M seed.",
-      "do_fit": "Kubernetes, Managed Databases, GPU Droplets, Spaces. Web-scale indexing is storage+compute intensive. DO Spaces for document storage, GPU Droplets for indexing/embedding pipelines.",
-      "angle": "Indexing 100B+ documents for AI agents is a massive storage and compute problem. DO Spaces + GPU Droplets as scalable, cost-predictable infrastructure for the indexing pipeline.",
-      "jev": {
-        "tier": "1m_plus",
-        "confidence": 0.98
-      },
-      "signals": [
+          "type": "strategy",
+          "detail": "Expanding from compliance automation into continuous agentic cybersecurity; eyes continuously agentic future for security",
+          "source_url": "https://techcrunch.com/2026/09/17/comp-ai-sets-eyes-on-a-continiously-agentic-future-for-security-and-complaince/"
+        },
         {
-          "date": "2026-08-25",
+          "date": "2026-09-17",
           "type": "funding",
-          "detail": "Raised $26M seed led by Accel, with Conviction Partners participation",
-          "source_url": "https://techcrunch.com/2026/08/25/accel-backed-keenable-is-indexing-the-web-for-ai-agents/"
-        },
-        {
-          "date": "2026-08-25",
-          "type": "product",
-          "detail": "API used in production at multiple AI labs and inference providers for training and runtime; partnership with voice AI company Gradium",
-          "source_url": "https://techcrunch.com/2026/08/25/accel-backed-keenable-is-indexing-the-web-for-ai-agents/"
-        },
-        {
-          "date": "2026-08-25",
-          "type": "team",
-          "detail": "Founded by former Yandex search/AI/cloud lead and German AI scientist; deep expertise in web-scale search infrastructure",
-          "source_url": "https://techcrunch.com/2026/08/25/accel-backed-keenable-is-indexing-the-web-for-ai-agents/"
+          "detail": "Raised $34M Series A led by Roo Capital and Grand Ventures; 1,000+ customers across healthcare, financial services, higher ed, software",
+          "source_url": "https://www.trycomp.ai/press/series-a"
         }
       ]
     },
@@ -1356,13 +1644,13 @@
         {
           "date": "2026-09-22",
           "type": "traction",
-          "detail": "$10M ARR in 18 months; agents originate $1B+/month in mortgages; 6 of 10 largest independent mortgage banks are customers",
+          "detail": "A/B test: 41% higher lead-to-lock rate vs competitor AI across 7,000+ leads; 9% improvement vs existing bank processes",
           "source_url": "https://www.prnewswire.com/news-releases/selas-ai-agents-help-originate-1b-in-loans-per-month-company-raises-21m-302885941.html"
         },
         {
           "date": "2026-09-22",
           "type": "traction",
-          "detail": "A/B test: 41% higher lead-to-lock rate vs competitor AI across 7,000+ leads; 9% improvement vs existing bank processes",
+          "detail": "$10M ARR in 18 months; agents originate $1B+/month in mortgages; 6 of 10 largest independent mortgage banks are customers",
           "source_url": "https://www.prnewswire.com/news-releases/selas-ai-agents-help-originate-1b-in-loans-per-month-company-raises-21m-302885941.html"
         },
         {
@@ -1370,6 +1658,183 @@
           "type": "funding",
           "detail": "Raised $21M total (Seed + Series A), led by Costanoa with Emergence Capital participating",
           "source_url": "https://www.prnewswire.com/news-releases/selas-ai-agents-help-originate-1b-in-loans-per-month-company-raises-21m-302885941.html"
+        }
+      ]
+    },
+    {
+      "company": "Astrus",
+      "url": "https://betakit.com/with-new-funding-astrus-prepares-to-automate-one-of-the-biggest-bottlenecks-in-chip-design/",
+      "first_seen_utc": "2026-09-23T11:55:45.051276+00:00",
+      "status": "new",
+      "score": 68,
+      "tier": "$100K+",
+      "summary": "AI chip design automation using reinforcement learning. $12M Series A (Caffeinated Capital + Khosla Ventures, Sep 22 2026).",
+      "do_fit": "GPU Droplets, Inference, Kubernetes",
+      "angle": "RL-based chip design needs GPU compute for training \u2014 DO's GPU Droplets at competitive pricing for ML workloads.",
+      "jev": null,
+      "signals": [
+        {
+          "date": "2026-09-23",
+          "type": "funding",
+          "detail": "AI chip design automation using reinforcement learning. $12M Series A (Caffeinated Capital + Khosla Ventures, Sep 22 2026).",
+          "source_url": "https://betakit.com/with-new-funding-astrus-prepares-to-automate-one-of-the-biggest-bottlenecks-in-chip-design/"
+        }
+      ]
+    },
+    {
+      "company": "Keenable",
+      "url": "https://keenable.com",
+      "first_seen_utc": "2026-09-22T00:00:00+00:00",
+      "status": "reported",
+      "score": 68,
+      "tier": "$100K+",
+      "summary": "Building a web search index of 100B+ documents optimized for AI agents, not humans. Accel-led $26M seed.",
+      "do_fit": "Kubernetes, Managed Databases, GPU Droplets, Spaces. Web-scale indexing is storage+compute intensive. DO Spaces for document storage, GPU Droplets for indexing/embedding pipelines.",
+      "angle": "Indexing 100B+ documents for AI agents is a massive storage and compute problem. DO Spaces + GPU Droplets as scalable, cost-predictable infrastructure for the indexing pipeline.",
+      "jev": {
+        "tier": "1m_plus",
+        "confidence": 0.98
+      },
+      "signals": [
+        {
+          "date": "2026-08-25",
+          "type": "team",
+          "detail": "Founded by former Yandex search/AI/cloud lead and German AI scientist; deep expertise in web-scale search infrastructure",
+          "source_url": "https://techcrunch.com/2026/08/25/accel-backed-keenable-is-indexing-the-web-for-ai-agents/"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "product",
+          "detail": "API used in production at multiple AI labs and inference providers for training and runtime; partnership with voice AI company Gradium",
+          "source_url": "https://techcrunch.com/2026/08/25/accel-backed-keenable-is-indexing-the-web-for-ai-agents/"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "funding",
+          "detail": "Raised $26M seed led by Accel, with Conviction Partners participation",
+          "source_url": "https://techcrunch.com/2026/08/25/accel-backed-keenable-is-indexing-the-web-for-ai-agents/"
+        }
+      ]
+    },
+    {
+      "company": "Kastle",
+      "url": "https://kastle.ai",
+      "first_seen_utc": "2026-09-23T02:54:57.356851+00:00",
+      "status": "new",
+      "score": 68,
+      "tier": "$100K+",
+      "summary": "AI workforce for banking operations. $24M Series A (Insight Partners, Sep 17 2026).",
+      "do_fit": "Kubernetes, Managed Databases, App Platform",
+      "angle": "AI for regulated banking \u2014 DO's compliant infrastructure can host their banking AI agents.",
+      "jev": null,
+      "signals": [
+        {
+          "date": "2026-09-23",
+          "type": "funding",
+          "detail": "$24M Series A led by Insight Partners (Sep 17 2026)",
+          "source_url": "https://www.prnewswire.com/news-releases/kastle-raises-24m-series-a-led-by-insight-partners-to-build-the-ai-workforce-for-banking-operations-302881290.html"
+        },
+        {
+          "date": "2026-09-17",
+          "type": "traction",
+          "detail": "AI agents processed $1.8B+ in transactions; powering work across some of the largest global banks",
+          "source_url": "https://www.prnewswire.com/news-releases/kastle-raises-24m-series-a-led-by-insight-partners-to-build-the-ai-workforce-for-banking-operations-302881290.html"
+        },
+        {
+          "date": "2026-09-17",
+          "type": "funding",
+          "detail": "Raised $24M Series A led by Insight Partners; Y Combinator, Commerce Ventures, Fifth Wall participated",
+          "source_url": "https://www.prnewswire.com/news-releases/kastle-raises-24m-series-a-led-by-insight-partners-to-build-the-ai-workforce-for-banking-operations-302881290.html"
+        }
+      ]
+    },
+    {
+      "company": "OpenFang (RightNow AI)",
+      "url": "https://github.com/RightNow-AI/openfang",
+      "first_seen_utc": "2026-09-23T11:55:45.051276+00:00",
+      "status": "new",
+      "score": 68,
+      "tier": "$100K+",
+      "summary": "Open-source Agent Operating System framework. 17.8K GitHub stars. Agent orchestration and deployment platform.",
+      "do_fit": "App Platform, Kubernetes, Managed Agents, Managed Databases",
+      "angle": "Fast-growing OSS agent framework \u2014 DO can be the default deployment target for their community with App Platform and Managed Agents.",
+      "jev": null,
+      "signals": [
+        {
+          "date": "2026-09-23",
+          "type": "funding",
+          "detail": "Open-source Agent Operating System framework. 17.8K GitHub stars. Agent orchestration and deployment platform.",
+          "source_url": "https://github.com/RightNow-AI/openfang"
+        }
+      ]
+    },
+    {
+      "company": "Subconscious",
+      "url": "https://subconscious.dev",
+      "first_seen_utc": "2026-09-23T02:54:57.356851+00:00",
+      "status": "new",
+      "score": 66,
+      "tier": "$100K+",
+      "summary": "Inference platform for long-running AI agents. MIT spinout. $5.1M seed (MassVentures, Sep 2026). Dynamic context compression technology.",
+      "do_fit": "GPU Droplets, Inference, Kubernetes",
+      "angle": "Agent inference platform from MIT \u2014 DO's Inference Engine can serve their context compression tech for long-running agents.",
+      "jev": null,
+      "signals": [
+        {
+          "date": "2026-09-23",
+          "type": "funding",
+          "detail": "$5.1M seed led by MassVentures; MIT spinout with dynamic context compression (Sep 2026)",
+          "source_url": "https://www.subconscious.dev/blog/subconscious-raises-5-1-million-to-build-the-inference-platform-for-long-running-agents"
+        },
+        {
+          "date": "2026-09-22",
+          "type": "traction",
+          "detail": "In production powering coding agents; cloud and on-prem deployment available",
+          "source_url": "https://www.subconscious.dev/blog/subconscious-raises-5-1-million-to-build-the-inference-platform-for-long-running-agents"
+        },
+        {
+          "date": "2026-09-22",
+          "type": "product",
+          "detail": "Inference platform: 2x faster task completion, 2.3x more concurrent requests vs SGLang, up to 80% cost reduction via dynamic context compression",
+          "source_url": "https://www.subconscious.dev/blog/subconscious-raises-5-1-million-to-build-the-inference-platform-for-long-running-agents"
+        },
+        {
+          "date": "2026-09-22",
+          "type": "funding",
+          "detail": "Raised $5.1M across pre-seed and seed led by MassVentures; Foothill Ventures, Underscore VC, E14 Fund, Oakseed, Agent Fund participated",
+          "source_url": "https://www.subconscious.dev/blog/subconscious-raises-5-1-million-to-build-the-inference-platform-for-long-running-agents"
+        }
+      ]
+    },
+    {
+      "company": "Chamelio",
+      "url": "https://chamelio.ai",
+      "first_seen_utc": "2026-09-23T02:54:57.356851+00:00",
+      "status": "new",
+      "score": 66,
+      "tier": "$100K+",
+      "summary": "AI-native in-house legal operations replacing CLM. $26M Series A (Sep 22 2026).",
+      "do_fit": "Kubernetes, Managed Databases, App Platform",
+      "angle": "Legal AI SaaS scaling fast \u2014 DO's managed infrastructure lets them focus on product, not ops.",
+      "jev": null,
+      "signals": [
+        {
+          "date": "2026-09-23",
+          "type": "funding",
+          "detail": "$26M Series A (Sep 22 2026)",
+          "source_url": "https://www.prnewswire.com/news-releases/chamelio-raises-26m-series-a-to-replace-legacy-clm-with-ai-native-in-house-legal-operations-302886011.html"
+        },
+        {
+          "date": "2026-09-22",
+          "type": "traction",
+          "detail": "4x ARR growth since seed round 5 months ago; hundreds of customers including Wiz, monday.com, Socure, AppsFlyer, Wonderful.ai",
+          "source_url": "https://www.prnewswire.com/news-releases/chamelio-raises-26m-series-a-to-replace-legacy-clm-with-ai-native-in-house-legal-operations-302886011.html"
+        },
+        {
+          "date": "2026-09-22",
+          "type": "funding",
+          "detail": "Raised $26M Series A led by Entr\u00e9e Capital; Work-Bench, Emerge Ventures, Bright Pixel Capital participated",
+          "source_url": "https://www.prnewswire.com/news-releases/chamelio-raises-26m-series-a-to-replace-legacy-clm-with-ai-native-in-house-legal-operations-302886011.html"
         }
       ]
     },
@@ -1403,41 +1868,6 @@
       ]
     },
     {
-      "company": "Subconscious",
-      "url": "https://subconscious.dev",
-      "first_seen_utc": "2026-09-23T02:54:57.356851+00:00",
-      "status": "new",
-      "score": 66,
-      "tier": "$100K+",
-      "summary": "MIT spinout building an inference platform for long-running AI agents. Dynamic context compression reduces token usage by up to 80%, completing tasks 2x faster with 2.3x more concurrent requests. $5.1M seed from MassVentures, Foothill, Underscore VC.",
-      "do_fit": "GPU Droplets, Inference, Kubernetes. Subconscious optimizes inference efficiency \u2014 partnership for DO GPU customers to get more throughput from GPU Droplets.",
-      "angle": "Your inference platform makes GPUs 2x more efficient for agent workloads. DO GPU Droplets + Subconscious as a bundled optimization layer for customers.",
-      "jev": {
-        "tier": "100k_plus",
-        "confidence": 0.6
-      },
-      "signals": [
-        {
-          "date": "2026-09-22",
-          "type": "traction",
-          "detail": "In production powering coding agents; cloud and on-prem deployment available",
-          "source_url": "https://www.subconscious.dev/blog/subconscious-raises-5-1-million-to-build-the-inference-platform-for-long-running-agents"
-        },
-        {
-          "date": "2026-09-22",
-          "type": "product",
-          "detail": "Inference platform: 2x faster task completion, 2.3x more concurrent requests vs SGLang, up to 80% cost reduction via dynamic context compression",
-          "source_url": "https://www.subconscious.dev/blog/subconscious-raises-5-1-million-to-build-the-inference-platform-for-long-running-agents"
-        },
-        {
-          "date": "2026-09-22",
-          "type": "funding",
-          "detail": "Raised $5.1M across pre-seed and seed led by MassVentures; Foothill Ventures, Underscore VC, E14 Fund, Oakseed, Agent Fund participated",
-          "source_url": "https://www.subconscious.dev/blog/subconscious-raises-5-1-million-to-build-the-inference-platform-for-long-running-agents"
-        }
-      ]
-    },
-    {
       "company": "Caveman",
       "url": "https://caveman.so",
       "first_seen_utc": "2026-09-22T21:49:56.998021+00:00",
@@ -1454,12 +1884,6 @@
       "signals": [
         {
           "date": "2026-09-22",
-          "type": "product",
-          "detail": "Commercial proxy at docs.caveman.so; cited in Adobe Research paper showing 1.4-2.4x cost reduction; JetBrains tested on 86 coding tasks finding 'costs you nothing measurable in quality'",
-          "source_url": "https://github.com/JuliusBrussee/caveman"
-        },
-        {
-          "date": "2026-09-22",
           "type": "traction",
           "detail": "Created April 2026; reached 4,000 stars in first week; now 107K+ stars; 30+ agent integrations (Claude Code, Codex, Gemini, Cursor, Windsurf, Cline, Copilot)",
           "source_url": "https://github.com/JuliusBrussee/caveman"
@@ -1468,6 +1892,12 @@
           "date": "2026-09-22",
           "type": "traction",
           "detail": "107,365 GitHub stars, 6,217 forks; #1 on GitHub Trending July 2026; #1 on Hacker News (904 points, 366 comments); #8 Product of the Day on Product Hunt",
+          "source_url": "https://github.com/JuliusBrussee/caveman"
+        },
+        {
+          "date": "2026-09-22",
+          "type": "product",
+          "detail": "Commercial proxy at docs.caveman.so; cited in Adobe Research paper showing 1.4-2.4x cost reduction; JetBrains tested on 86 coding tasks finding 'costs you nothing measurable in quality'",
           "source_url": "https://github.com/JuliusBrussee/caveman"
         }
       ]
@@ -1489,8 +1919,8 @@
       "signals": [
         {
           "date": "2026-09-07",
-          "type": "funding",
-          "detail": "Emerged from stealth with $50M seed (split across two rounds) from Sequoia Capital and Greenoaks; 20+ enterprise customers",
+          "type": "team",
+          "detail": "Founded by Unit 8200 (Israeli intelligence) veterans with deep cybersecurity expertise",
           "source_url": "https://theaiinsider.tech/2026/09/07/ai-security-startup-air-emerges-from-stealth-with-50m-to-secure-the-ai-agent-supply-chain/"
         },
         {
@@ -1501,8 +1931,8 @@
         },
         {
           "date": "2026-09-07",
-          "type": "team",
-          "detail": "Founded by Unit 8200 (Israeli intelligence) veterans with deep cybersecurity expertise",
+          "type": "funding",
+          "detail": "Emerged from stealth with $50M seed (split across two rounds) from Sequoia Capital and Greenoaks; 20+ enterprise customers",
           "source_url": "https://theaiinsider.tech/2026/09/07/ai-security-startup-air-emerges-from-stealth-with-50m-to-secure-the-ai-agent-supply-chain/"
         }
       ]
@@ -1537,89 +1967,78 @@
       ]
     },
     {
-      "company": "Kastle",
-      "url": "https://kastle.ai",
-      "first_seen_utc": "2026-09-23T02:54:57.356851+00:00",
-      "status": "new",
+      "company": "Cymphony",
+      "url": "https://cymphony.io",
+      "first_seen_utc": "2026-09-22T00:00:00+00:00",
+      "status": "watching",
       "score": 64,
       "tier": "$100K+",
-      "summary": "AI workforce platform for banking operations. Deploys specialized AI agents that work across existing core banking systems. $24M Series A led by Insight Partners. YC-backed. Processed $1.8B+ in transactions.",
-      "do_fit": "Kubernetes, Managed Databases. AI agents processing banking transactions at scale need compliant, reliable infrastructure.",
-      "angle": "Banks deploying your AI workforce need compliant, predictable infrastructure. DO Kubernetes + Managed Databases as SOC 2/ISO 27001-certified deployment platform for regional banks adopting AI operations.",
-      "jev": {
-        "tier": "1m_plus",
-        "confidence": 0.79
-      },
+      "summary": "AI agent security platform. $30M Series A at $100M+ valuation (Sequoia double-down, Sep 9 2026).",
+      "do_fit": "Kubernetes, Managed Agents, Managed Databases",
+      "angle": "Agent security with Sequoia backing \u2014 DO's Managed Agents platform could integrate Cymphony as a native security layer.",
+      "jev": null,
       "signals": [
         {
-          "date": "2026-09-17",
-          "type": "traction",
-          "detail": "AI agents processed $1.8B+ in transactions; powering work across some of the largest global banks",
-          "source_url": "https://www.prnewswire.com/news-releases/kastle-raises-24m-series-a-led-by-insight-partners-to-build-the-ai-workforce-for-banking-operations-302881290.html"
+          "date": "2026-09-23",
+          "type": "funding",
+          "detail": "$30M total ($25M Series A); Sequoia co-lead; $100M+ valuation (Sep 9 2026)",
+          "source_url": "https://aistartupsnews.com/topics/series-a/"
         },
         {
-          "date": "2026-09-17",
+          "date": "2026-09-09",
+          "type": "traction",
+          "detail": "Double-digit enterprise customers (KKR, Syngenta, Cass Information Systems, Athennian); seven-figure ARR in first year",
+          "source_url": "https://venturecapitaltracker.com/2026-cymphony-25m-series-a-sequoia-ai-agent-security"
+        },
+        {
+          "date": "2026-09-09",
+          "type": "product",
+          "detail": "Found 85,000 files exposed to AI agents at one US public company; workforce graph maps identity, data, and activity across humans and agents",
+          "source_url": "https://techcrunch.com/2026/09/09/sequoia-doubles-down-on-cymphony-as-ai-agents-create-new-enterprise-security-risks/"
+        },
+        {
+          "date": "2026-09-09",
+          "type": "investor",
+          "detail": "Sequoia doubled down as AI agents create new enterprise security risks at machine speed",
+          "source_url": "https://techcrunch.com/2026/09/09/sequoia-doubles-down-on-cymphony-as-ai-agents-create-new-enterprise-security-risks/"
+        },
+        {
+          "date": "2026-09-09",
           "type": "funding",
-          "detail": "Raised $24M Series A led by Insight Partners; Y Combinator, Commerce Ventures, Fifth Wall participated",
-          "source_url": "https://www.prnewswire.com/news-releases/kastle-raises-24m-series-a-led-by-insight-partners-to-build-the-ai-workforce-for-banking-operations-302881290.html"
+          "detail": "Raised $25M Series A co-led by Sequoia and SMBC Fin Atlas at >$100M post-money; ~$30M total with prior seed",
+          "source_url": "https://techcrunch.com/2026/09/09/sequoia-doubles-down-on-cymphony-as-ai-agents-create-new-enterprise-security-risks/"
         }
       ]
     },
     {
-      "company": "Mantic",
-      "url": "https://mantic.ai",
-      "first_seen_utc": "2026-09-22T00:00:00+00:00",
-      "status": "reported",
-      "score": 62,
-      "tier": "$100K+",
-      "summary": "AI forecasting startup building superhuman prediction systems; beat all humans in Metaculus Cup. Radical Ventures-led $25M seed.",
-      "do_fit": "GPU Droplets, Kubernetes, Managed Databases. Forecasting models need compute for inference and data processing pipelines.",
-      "angle": "AI forecasting at scale needs reliable compute. DO GPU Droplets for inference, Managed Databases for prediction data \u2014 infrastructure that scales with your forecast horizon.",
-      "jev": {
-        "tier": "1m_plus",
-        "confidence": 0.48
-      },
-      "signals": [
-        {
-          "date": "2026-09-18",
-          "type": "funding",
-          "detail": "Raised $25M seed led by Radical Ventures; M12 (Microsoft), Thinking Machines Lab, Balderton participated",
-          "source_url": "https://techstartups.com/2026/09/18/british-ai-startup-mantic-raises-25m-to-build-superhuman-ai-forecasting-after-metaculus-win/"
-        },
-        {
-          "date": "2026-09-18",
-          "type": "traction",
-          "detail": "Beat every human competitor in Summer 2026 Metaculus Cup; founded by ex-Google DeepMind research scientist",
-          "source_url": "https://techstartups.com/2026/09/18/british-ai-startup-mantic-raises-25m-to-build-superhuman-ai-forecasting-after-metaculus-win/"
-        }
-      ]
-    },
-    {
-      "company": "Chamelio",
-      "url": "https://chamelio.ai",
+      "company": "Envive AI",
+      "url": "https://envive.ai",
       "first_seen_utc": "2026-09-23T02:54:57.356851+00:00",
       "status": "new",
       "score": 62,
       "tier": "$100K+",
-      "summary": "AI-native contract lifecycle management platform for in-house legal teams. $26M Series A led by Entr\u00e9e Capital, 4x ARR growth since seed 5 months ago. Customers: Wiz, monday.com, Socure, AppsFlyer, Wonderful.ai.",
-      "do_fit": "Kubernetes, Managed Databases. Legal AI platform processing contracts at scale needs compliant cloud infra for hundreds of enterprise legal teams.",
-      "angle": "Your legal AI agents handle sensitive contracts for Wiz and monday.com. DO Kubernetes + Managed Databases as SOC 2-certified infrastructure for enterprise legal workloads.",
-      "jev": {
-        "tier": "100k_plus",
-        "confidence": 0.46
-      },
+      "summary": "Self-improving agents for agentic commerce. $15M Series A (Sep 16 2026).",
+      "do_fit": "Kubernetes, Managed Databases, App Platform, Managed Agents",
+      "angle": "Agentic commerce platform \u2014 DO's Managed Agents can run their self-improving agent infrastructure.",
+      "jev": null,
       "signals": [
         {
-          "date": "2026-09-22",
+          "date": "2026-09-23",
           "type": "funding",
-          "detail": "Raised $26M Series A led by Entr\u00e9e Capital; Work-Bench, Emerge Ventures, Bright Pixel Capital participated",
-          "source_url": "https://www.prnewswire.com/news-releases/chamelio-raises-26m-series-a-to-replace-legacy-clm-with-ai-native-in-house-legal-operations-302886011.html"
+          "detail": "$15M Series A (Sep 16 2026)",
+          "source_url": "https://www.envive.ai/post/envive-ai-raises-15m-series-a-to-power-self-improving-agents-for-the-agentic-commerce-era"
         },
         {
-          "date": "2026-09-22",
-          "type": "traction",
-          "detail": "4x ARR growth since seed round 5 months ago; hundreds of customers including Wiz, monday.com, Socure, AppsFlyer, Wonderful.ai",
-          "source_url": "https://www.prnewswire.com/news-releases/chamelio-raises-26m-series-a-to-replace-legacy-clm-with-ai-native-in-house-legal-operations-302886011.html"
+          "date": "2026-09-16",
+          "type": "product",
+          "detail": "Self-improving AI agents for eCommerce: search, sales, support, and SEO",
+          "source_url": "https://www.envive.ai/post/envive-ai-raises-15m-series-a-to-power-self-improving-agents-for-the-agentic-commerce-era"
+        },
+        {
+          "date": "2026-09-16",
+          "type": "funding",
+          "detail": "Raised $15M Series A led by Fuse VC; total funding $20M",
+          "source_url": "https://www.envive.ai/post/envive-ai-raises-15m-series-a-to-power-self-improving-agents-for-the-agentic-commerce-era"
         }
       ]
     },
@@ -1653,6 +2072,139 @@
       ]
     },
     {
+      "company": "Emerald AI",
+      "url": "https://emerald.ai",
+      "first_seen_utc": "2026-09-22T00:00:00+00:00",
+      "status": "watching",
+      "score": 62,
+      "tier": "$100K+",
+      "summary": "AI compute/GPU cloud backed by Nvidia + Digital Realty. $150M raised. Facing 100MW Virginia grid bottleneck.",
+      "do_fit": "GPU Droplets, Inference, Kubernetes",
+      "angle": "GPU cloud competitor hitting capacity limits \u2014 DO can absorb their overflow inference demand.",
+      "jev": null,
+      "signals": [
+        {
+          "date": "2026-09-23",
+          "type": "funding",
+          "detail": "$150M round; 100MW Virginia grid bottleneck (Sep 2026)",
+          "source_url": "https://aistartupsnews.com/topics/series-a/"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "traction",
+          "detail": "Software deployed commercially at multi-megawatt data center scale; five global demonstrations completed",
+          "source_url": "https://thenextweb.com/news/emerald-ai-150m-funding-data-centre-grid-flexibility"
+        },
+        {
+          "date": "2026-08-25",
+          "type": "funding",
+          "detail": "Raised $150M Series A at $1.05B, co-led by Energize and DCVC; NVIDIA, Siemens, RWE, GE Vernova among investors; 12 Fortune 500 companies hold stakes",
+          "source_url": "https://venturebeat.com/business/emerald-ai-raises-150-million-series-a-at-105-billion-valuation-to-scale-power-flexible-ai-data-centers/"
+        }
+      ]
+    },
+    {
+      "company": "Disseqt AI",
+      "url": "https://www.linkedin.com/posts/manishatri_head-of-infrastructure-platform-engineering-activity-7474436763826962432-o_HT",
+      "first_seen_utc": "2026-09-23T11:55:45.051276+00:00",
+      "status": "new",
+      "score": 62,
+      "tier": "$100K+",
+      "summary": "Enterprise AI governance assurance layer. Hiring Head of Infrastructure & Platform Engineering (Sep 2026).",
+      "do_fit": "Kubernetes, Managed Databases, App Platform",
+      "angle": "Enterprise AI governance startup scaling infrastructure team \u2014 approach through the new Head of Infrastructure hire.",
+      "jev": null,
+      "signals": [
+        {
+          "date": "2026-09-23",
+          "type": "funding",
+          "detail": "Enterprise AI governance assurance layer. Hiring Head of Infrastructure & Platform Engineering (Sep 2026).",
+          "source_url": "https://www.linkedin.com/posts/manishatri_head-of-infrastructure-platform-engineering-activity-7474436763826962432-o_HT"
+        }
+      ]
+    },
+    {
+      "company": "Confido",
+      "url": "https://dealroom.co/news/155467-confido-lands-55m-series-b-to-automate-the-cpg-back-office/",
+      "first_seen_utc": "2026-09-23T11:55:45.051276+00:00",
+      "status": "new",
+      "score": 62,
+      "tier": "$100K+",
+      "summary": "AI back-office automation for CPG brands. 250+ brand customers. $55M Series B (Insight Partners, Sep 22 2026). Total $77M raised.",
+      "do_fit": "Kubernetes, Managed Databases, App Platform",
+      "angle": "Scaling AI SaaS for CPG \u2014 DO's managed infrastructure keeps ops simple while handling growing transaction volume.",
+      "jev": null,
+      "signals": [
+        {
+          "date": "2026-09-23",
+          "type": "funding",
+          "detail": "AI back-office automation for CPG brands. 250+ brand customers. $55M Series B (Insight Partners, Sep 22 2026). Total $77M raised.",
+          "source_url": "https://dealroom.co/news/155467-confido-lands-55m-series-b-to-automate-the-cpg-back-office/"
+        }
+      ]
+    },
+    {
+      "company": "Mantic",
+      "url": "https://mantic.ai",
+      "first_seen_utc": "2026-09-22T00:00:00+00:00",
+      "status": "reported",
+      "score": 62,
+      "tier": "$100K+",
+      "summary": "AI forecasting startup building superhuman prediction systems; beat all humans in Metaculus Cup. Radical Ventures-led $25M seed.",
+      "do_fit": "GPU Droplets, Kubernetes, Managed Databases. Forecasting models need compute for inference and data processing pipelines.",
+      "angle": "AI forecasting at scale needs reliable compute. DO GPU Droplets for inference, Managed Databases for prediction data \u2014 infrastructure that scales with your forecast horizon.",
+      "jev": {
+        "tier": "1m_plus",
+        "confidence": 0.48
+      },
+      "signals": [
+        {
+          "date": "2026-09-18",
+          "type": "traction",
+          "detail": "Beat every human competitor in Summer 2026 Metaculus Cup; founded by ex-Google DeepMind research scientist",
+          "source_url": "https://techstartups.com/2026/09/18/british-ai-startup-mantic-raises-25m-to-build-superhuman-ai-forecasting-after-metaculus-win/"
+        },
+        {
+          "date": "2026-09-18",
+          "type": "funding",
+          "detail": "Raised $25M seed led by Radical Ventures; M12 (Microsoft), Thinking Machines Lab, Balderton participated",
+          "source_url": "https://techstartups.com/2026/09/18/british-ai-startup-mantic-raises-25m-to-build-superhuman-ai-forecasting-after-metaculus-win/"
+        }
+      ]
+    },
+    {
+      "company": "Euno",
+      "url": "https://euno.ai",
+      "first_seen_utc": "2026-09-22T00:00:00+00:00",
+      "status": "watching",
+      "score": 62,
+      "tier": "$100K+",
+      "summary": "Enterprise AI context layer. $23M raise (Sep 13 2026).",
+      "do_fit": "Kubernetes, Managed Databases, App Platform",
+      "angle": "Enterprise AI context infrastructure \u2014 DO's managed services at lower cost than hyperscalers.",
+      "jev": null,
+      "signals": [
+        {
+          "date": "2026-09-23",
+          "type": "funding",
+          "detail": "$23M raise (Sep 13 2026)",
+          "source_url": "https://aistartupsnews.com/topics/series-a/"
+        },
+        {
+          "date": "2026-09-09",
+          "type": "traction",
+          "detail": "Fortune 500 clients deploying AI into production within weeks using Euno context platform",
+          "source_url": "https://euno.ai/blog/euno-raises-series-a"
+        },
+        {
+          "date": "2026-09-09",
+          "type": "funding",
+          "detail": "Raised $23M Series A led by N47; total $29M; Wiz, Cyera, Eon, Tavily founders as angels",
+          "source_url": "https://www.prnewswire.com/news-releases/euno-raises-23-million-series-a-to-build-the-ai-context-brain-for-the-enterprise-302872947.html"
+        }
+      ]
+    },
+    {
       "company": "Enhans",
       "url": "https://enhans.ai",
       "first_seen_utc": "2026-09-22T00:00:00+00:00",
@@ -1669,6 +2221,12 @@
       "signals": [
         {
           "date": "2026-09-17",
+          "type": "traction",
+          "detail": "POSCO, LG, and Lotte groups already run Enhans in live operations; 20x ARR growth over past year; 50 employees, doubling in 2027",
+          "source_url": "https://thenextweb.com/news/biolevate-raises-30m-series-a-boston"
+        },
+        {
+          "date": "2026-09-17",
           "type": "funding",
           "detail": "Raised $38M Series C co-led by TIMEFOLIO and Stonebridge Ventures; total $60M; POSCO, LG, Lotte groups as both customers and strategic investors.",
           "source_url": "https://www.enhans.ai/press/enhans-raises-38-million-in-series-c-funding"
@@ -1678,47 +2236,26 @@
           "type": "funding",
           "detail": "Raised $38M Series C co-led by TIMEFOLIO and Stonebridge Ventures; total $60M; POSCO Investment, LG CNS, Lotte Ventures joined as strategic investors",
           "source_url": "https://www.enhans.ai/press/enhans-raises-38-million-in-series-c-funding"
-        },
-        {
-          "date": "2026-09-17",
-          "type": "traction",
-          "detail": "POSCO, LG, and Lotte groups already run Enhans in live operations; 20x ARR growth over past year; 50 employees, doubling in 2027",
-          "source_url": "https://thenextweb.com/news/biolevate-raises-30m-series-a-boston"
         }
       ]
     },
     {
-      "company": "Inco AI",
-      "url": "https://inco.ai",
-      "first_seen_utc": "2026-09-22T00:00:00+00:00",
-      "status": "reported",
+      "company": "Graph AI",
+      "url": "https://www.prnewswire.com/news-releases/graph-ai-raises-13-3m-series-a-to-scale-the-first-ai-native-operating-system-for-patient-safety-302874459.html",
+      "first_seen_utc": "2026-09-23T11:55:45.051276+00:00",
+      "status": "new",
       "score": 60,
       "tier": "$100K+",
-      "summary": "Inference platform purpose-built for the agentic era. Leads Artificial Analysis leaderboards for output speed across 4+ open models (Kimi K3, MiniMax M3, GLM 5.3, GLM 5.3 Flash). Launched Splash, open-source local inference engine for Apple Silicon. Backed by investors including former OmniML team (acq. NVIDIA).",
-      "do_fit": "GPU Droplets, Inference, Kubernetes. Inco runs inference on data-center GPUs \u2014 DO GPU Droplets as additional capacity for their inference platform, especially for mid-market customers.",
-      "angle": "You're building the fastest inference layer for the agentic era. DO GPU Droplets as cost-effective inference capacity to expand your fleet beyond your own hardware \u2014 reaching more customers at lower cost.",
-      "jev": {
-        "tier": "100k_plus",
-        "confidence": 0.26
-      },
+      "summary": "AI-native OS for pharma safety/pharmacovigilance. $13.3M Series A (Sep 2026).",
+      "do_fit": "Kubernetes, Managed Databases, App Platform",
+      "angle": "Pharma AI platform with compliance needs \u2014 DO's managed infrastructure with SOC2/HIPAA readiness.",
+      "jev": null,
       "signals": [
         {
-          "date": "2026-08-28",
-          "type": "traction",
-          "detail": "Day-0 support for GLM 5.3 with 4.4x throughput improvement; investor said 'Agents are an economics problem \u2014 Inco is the solution'",
-          "source_url": "https://www.linkedin.com/posts/matt-rhodes-kropf-45633_inco-ai-launches-day-0-support-for-glm-53-activity-7499224674464260096-0EWT"
-        },
-        {
-          "date": "2026-09-03",
-          "type": "product",
-          "detail": "Launched inference platform in public beta \u2014 #1 on Artificial Analysis for output speed on Kimi K3 (1.78x next provider), MiniMax M3 (1.78x), GLM 5.3 (1.81x), GLM 5.3 Flash (1.85x)",
-          "source_url": "https://inco.ai/blog/inco-platform-aa/"
-        },
-        {
-          "date": "2026-09-17",
-          "type": "product",
-          "detail": "Released Splash, open-source inference engine for Apple Silicon \u2014 2x faster than Ollama/MLX on Qwen3.8-27B, up to 4x with parallel sub-agents",
-          "source_url": "https://inco.ai/blog/splash/"
+          "date": "2026-09-23",
+          "type": "funding",
+          "detail": "AI-native OS for pharma safety/pharmacovigilance. $13.3M Series A (Sep 2026).",
+          "source_url": "https://www.prnewswire.com/news-releases/graph-ai-raises-13-3m-series-a-to-scale-the-first-ai-native-operating-system-for-patient-safety-302874459.html"
         }
       ]
     },
@@ -1781,72 +2318,89 @@
       ]
     },
     {
-      "company": "Envive AI",
-      "url": "https://envive.ai",
-      "first_seen_utc": "2026-09-23T02:54:57.356851+00:00",
-      "status": "new",
-      "score": 58,
+      "company": "Inco AI",
+      "url": "https://inco.ai",
+      "first_seen_utc": "2026-09-22T00:00:00+00:00",
+      "status": "reported",
+      "score": 60,
       "tier": "$100K+",
-      "summary": "Intelligence layer for digital commerce. Self-improving AI agents for eCommerce search, sales, support, SEO. $15M Series A led by Fuse VC, $20M total funding.",
-      "do_fit": "GPU Droplets (inference for commerce agents), Managed Databases, Kubernetes.",
-      "angle": "Your commerce AI agents personalize shopping in real time. DO GPU Droplets for inference at eCommerce scale with predictable pricing.",
+      "summary": "Inference platform purpose-built for the agentic era. Leads Artificial Analysis leaderboards for output speed across 4+ open models (Kimi K3, MiniMax M3, GLM 5.3, GLM 5.3 Flash). Launched Splash, open-source local inference engine for Apple Silicon. Backed by investors including former OmniML team (acq. NVIDIA).",
+      "do_fit": "GPU Droplets, Inference, Kubernetes. Inco runs inference on data-center GPUs \u2014 DO GPU Droplets as additional capacity for their inference platform, especially for mid-market customers.",
+      "angle": "You're building the fastest inference layer for the agentic era. DO GPU Droplets as cost-effective inference capacity to expand your fleet beyond your own hardware \u2014 reaching more customers at lower cost.",
       "jev": {
         "tier": "100k_plus",
-        "confidence": 0.46
+        "confidence": 0.26
       },
       "signals": [
         {
-          "date": "2026-09-16",
-          "type": "funding",
-          "detail": "Raised $15M Series A led by Fuse VC; total funding $20M",
-          "source_url": "https://www.envive.ai/post/envive-ai-raises-15m-series-a-to-power-self-improving-agents-for-the-agentic-commerce-era"
+          "date": "2026-09-17",
+          "type": "product",
+          "detail": "Released Splash, open-source inference engine for Apple Silicon \u2014 2x faster than Ollama/MLX on Qwen3.8-27B, up to 4x with parallel sub-agents",
+          "source_url": "https://inco.ai/blog/splash/"
         },
         {
-          "date": "2026-09-16",
+          "date": "2026-09-03",
           "type": "product",
-          "detail": "Self-improving AI agents for eCommerce: search, sales, support, and SEO",
-          "source_url": "https://www.envive.ai/post/envive-ai-raises-15m-series-a-to-power-self-improving-agents-for-the-agentic-commerce-era"
+          "detail": "Launched inference platform in public beta \u2014 #1 on Artificial Analysis for output speed on Kimi K3 (1.78x next provider), MiniMax M3 (1.78x), GLM 5.3 (1.81x), GLM 5.3 Flash (1.85x)",
+          "source_url": "https://inco.ai/blog/inco-platform-aa/"
+        },
+        {
+          "date": "2026-08-28",
+          "type": "traction",
+          "detail": "Day-0 support for GLM 5.3 with 4.4x throughput improvement; investor said 'Agents are an economics problem \u2014 Inco is the solution'",
+          "source_url": "https://www.linkedin.com/posts/matt-rhodes-kropf-45633_inco-ai-launches-day-0-support-for-glm-53-activity-7499224674464260096-0EWT"
         }
       ]
     },
     {
-      "company": "Cymphony",
-      "url": "https://cymphony.io",
-      "first_seen_utc": "2026-09-22T00:00:00+00:00",
-      "status": "reported",
+      "company": "Spott",
+      "url": "https://spott.ai",
+      "first_seen_utc": "2026-09-23T02:54:57.356851+00:00",
+      "status": "new",
       "score": 58,
       "tier": "$100K+",
-      "summary": "AI agent workforce security; single view of human employees + AI agents as one workforce graph. Sequoia-backed, $100M+ valuation.",
-      "do_fit": "Kubernetes, Managed Databases. Security platform for enterprises running AI agents \u2014 DO Kubernetes as a deployment target for their security infrastructure.",
-      "angle": "Every enterprise running AI agents needs your security. DO Kubernetes as a managed, secure deployment target \u2014 especially for mid-market enterprises adopting AI agents fast.",
-      "jev": {
-        "tier": "100k_plus",
-        "confidence": 0.53
-      },
+      "summary": "AI recruitment platform. $21M Series A (Sep 22 2026).",
+      "do_fit": "Kubernetes, Managed Databases, App Platform",
+      "angle": "AI recruitment SaaS \u2014 DO's App Platform provides zero-ops deployment for their growing platform.",
+      "jev": null,
       "signals": [
         {
-          "date": "2026-09-09",
-          "type": "traction",
-          "detail": "Double-digit enterprise customers (KKR, Syngenta, Cass Information Systems, Athennian); seven-figure ARR in first year",
-          "source_url": "https://venturecapitaltracker.com/2026-cymphony-25m-series-a-sequoia-ai-agent-security"
-        },
-        {
-          "date": "2026-09-09",
-          "type": "product",
-          "detail": "Found 85,000 files exposed to AI agents at one US public company; workforce graph maps identity, data, and activity across humans and agents",
-          "source_url": "https://techcrunch.com/2026/09/09/sequoia-doubles-down-on-cymphony-as-ai-agents-create-new-enterprise-security-risks/"
-        },
-        {
-          "date": "2026-09-09",
+          "date": "2026-09-23",
           "type": "funding",
-          "detail": "Raised $25M Series A co-led by Sequoia and SMBC Fin Atlas at >$100M post-money; ~$30M total with prior seed",
-          "source_url": "https://techcrunch.com/2026/09/09/sequoia-doubles-down-on-cymphony-as-ai-agents-create-new-enterprise-security-risks/"
+          "detail": "$21M Series A (Sep 22 2026)",
+          "source_url": "https://tech.eu/2026/09/22/spott-secures-21m-series-a-to-expand-its-ai-platform-for-recruitment-agencies/"
         },
         {
-          "date": "2026-09-09",
-          "type": "investor",
-          "detail": "Sequoia doubled down as AI agents create new enterprise security risks at machine speed",
-          "source_url": "https://techcrunch.com/2026/09/09/sequoia-doubles-down-on-cymphony-as-ai-agents-create-new-enterprise-security-risks/"
+          "date": "2026-09-22",
+          "type": "traction",
+          "detail": "Opening Sydney and NYC offices; expanding internationally with enterprise product development",
+          "source_url": "https://tech.eu/2026/09/22/spott-secures-21m-series-a-to-expand-its-ai-platform-for-recruitment-agencies/"
+        },
+        {
+          "date": "2026-09-22",
+          "type": "funding",
+          "detail": "Raised $21M Series A led by Balderton Capital; Base10 Partners, Y Combinator, Fortino participated",
+          "source_url": "https://tech.eu/2026/09/22/spott-secures-21m-series-a-to-expand-its-ai-platform-for-recruitment-agencies/"
+        }
+      ]
+    },
+    {
+      "company": "Adaptive",
+      "url": "https://www.bizjournals.com/newyork/news/2026/09/17/nyc-construction-tech-startup-raises-30m.html",
+      "first_seen_utc": "2026-09-23T11:55:45.051276+00:00",
+      "status": "new",
+      "score": 58,
+      "tier": "$100K+",
+      "summary": "AI accounting automation for construction. Agents handle invoices, billings, and payments. $30M Series B (Tidemark, Sep 17 2026). Total $57M raised.",
+      "do_fit": "Kubernetes, Managed Databases, App Platform",
+      "angle": "Construction AI fintech at scale \u2014 DO's managed services keep DevOps lean while growing.",
+      "jev": null,
+      "signals": [
+        {
+          "date": "2026-09-23",
+          "type": "funding",
+          "detail": "AI accounting automation for construction. Agents handle invoices, billings, and payments. $30M Series B (Tidemark, Sep 17 2026). Total $57M raised.",
+          "source_url": "https://www.bizjournals.com/newyork/news/2026/09/17/nyc-construction-tech-startup-raises-30m.html"
         }
       ]
     },
@@ -1874,35 +2428,6 @@
       ]
     },
     {
-      "company": "Nuance Labs",
-      "url": "https://nuancelabs.ai",
-      "first_seen_utc": "2026-09-22T00:00:00+00:00",
-      "status": "reported",
-      "score": 56,
-      "tier": "$100K+",
-      "summary": "Full-duplex AI foundation model that perceives and responds to real-time human expression (tone, gaze, timing). Lightspeed-led $50M Series A.",
-      "do_fit": "GPU Droplets/Bare Metal, Inference. Real-time multimodal model serving requires low-latency GPU inference \u2014 DO GPU Droplets for inference endpoints, especially for sales/customer service use cases.",
-      "angle": "Your full-duplex model needs real-time, low-latency GPU inference. DO GPU Droplets in multiple regions for global inference \u2014 critical when you're processing live tone, gaze, and timing cues.",
-      "jev": {
-        "tier": "1m_plus",
-        "confidence": 0.95
-      },
-      "signals": [
-        {
-          "date": "2026-09-17",
-          "type": "funding",
-          "detail": "Raised $50M Series A led by Lightspeed; NVIDIA, Accel, South Park Commons, Define Ventures joined; total $60M",
-          "source_url": "https://www.thesaasnews.com/news/nuance-labs-raises-50m-series-a/"
-        },
-        {
-          "date": "2026-09-17",
-          "type": "product",
-          "detail": "Building full-duplex foundation model for real-time audiovisual AI \u2014 deployed for sales, customer service, coaching, education",
-          "source_url": "https://www.thesaasnews.com/news/nuance-labs-raises-50m-series-a/"
-        }
-      ]
-    },
-    {
       "company": "StarSling",
       "url": "https://starsling.dev",
       "first_seen_utc": "2026-09-22T21:49:56.998021+00:00",
@@ -1925,14 +2450,14 @@
         },
         {
           "date": "2026-09-22",
-          "type": "funding",
-          "detail": "Raised $3M pre-seed from Bessemer Venture Partners, Y Combinator, Vermilion Cliffs, Precursor, Cervin, Outset Capital, Transpose Platform",
+          "type": "product",
+          "detail": "Launched Review Runners: bring-your-own-model code review agents for GitHub Actions; customers bring API key, StarSling supplies compute at $0.004/min",
           "source_url": "https://runtimewire.com/article/starsling-raises-3m-review-runners-code-review-agents"
         },
         {
           "date": "2026-09-22",
-          "type": "product",
-          "detail": "Launched Review Runners: bring-your-own-model code review agents for GitHub Actions; customers bring API key, StarSling supplies compute at $0.004/min",
+          "type": "funding",
+          "detail": "Raised $3M pre-seed from Bessemer Venture Partners, Y Combinator, Vermilion Cliffs, Precursor, Cervin, Outset Capital, Transpose Platform",
           "source_url": "https://runtimewire.com/article/starsling-raises-3m-review-runners-code-review-agents"
         }
       ]
@@ -1954,12 +2479,6 @@
       "signals": [
         {
           "date": "2026-09-22",
-          "type": "funding",
-          "detail": "Raised $35M Series A led by M13; Torch Capital, Picus Ventures, Afore Capital participated",
-          "source_url": "https://www.prnewswire.com/news-releases/baselayer-raises-35m-series-a-led-by-m13-launches-identity-infrastructure-for-ai-agents-302885670.html"
-        },
-        {
-          "date": "2026-09-22",
           "type": "traction",
           "detail": "Stripe reports 70%+ of API requests now come from AI agents; Baselayer positioned as identity layer for agentic commerce",
           "source_url": "https://siliconangle.com/2026/09/22/with-35m-in-series-a-funding-baselayer-is-building-the-trust-layer-for-the-agentic-economy/"
@@ -1975,93 +2494,12 @@
           "type": "product",
           "detail": "Launched Agentic Identity Suite \u2014 first interoperable trust layer and agentic fraud consortium; 2,300+ financial institutions on platform",
           "source_url": "https://www.prnewswire.com/news-releases/baselayer-raises-35m-series-a-led-by-m13-launches-identity-infrastructure-for-ai-agents-302885670.html"
-        }
-      ]
-    },
-    {
-      "company": "Spott",
-      "url": "https://spott.ai",
-      "first_seen_utc": "2026-09-23T02:54:57.356851+00:00",
-      "status": "new",
-      "score": 54,
-      "tier": "$100K+",
-      "summary": "AI-native ATS/CRM platform for recruitment agencies. $21M Series A led by Balderton Capital, with Base10, YC, Fortino. Single platform combining candidate management, search, conversations, outreach. Opening Sydney and NYC offices.",
-      "do_fit": "Kubernetes, Managed Databases, Spaces. AI recruitment platform managing databases of up to 2M candidates across global offices.",
-      "angle": "Your AI recruitment platform serves agencies globally. DO's global regions + Managed Databases give you multi-region deployment without hyperscaler complexity.",
-      "jev": {
-        "tier": "100k_plus",
-        "confidence": 0.76
-      },
-      "signals": [
-        {
-          "date": "2026-09-22",
-          "type": "funding",
-          "detail": "Raised $21M Series A led by Balderton Capital; Base10 Partners, Y Combinator, Fortino participated",
-          "source_url": "https://tech.eu/2026/09/22/spott-secures-21m-series-a-to-expand-its-ai-platform-for-recruitment-agencies/"
         },
         {
           "date": "2026-09-22",
-          "type": "traction",
-          "detail": "Opening Sydney and NYC offices; expanding internationally with enterprise product development",
-          "source_url": "https://tech.eu/2026/09/22/spott-secures-21m-series-a-to-expand-its-ai-platform-for-recruitment-agencies/"
-        }
-      ]
-    },
-    {
-      "company": "Emerald AI",
-      "url": "https://emerald.ai",
-      "first_seen_utc": "2026-09-22T00:00:00+00:00",
-      "status": "reported",
-      "score": 54,
-      "tier": "$100K+",
-      "summary": "Power-flexible AI data centers; dynamically adjusts compute loads to grid conditions. $150M Series A at $1.05B, backed by NVIDIA, Siemens, RWE.",
-      "do_fit": "Indirect DO fit \u2014 Emerald is infrastructure optimization software. Partnership potential: DO Bare Metal customers deploying Emerald Conductor for power-aware scheduling.",
-      "angle": "Your software makes AI data centers grid-aware. DO Bare Metal customers running 24/7 GPU workloads would benefit from Emerald Conductor \u2014 co-market to the mid-market segment.",
-      "jev": {
-        "tier": "1m_plus",
-        "confidence": 0.85
-      },
-      "signals": [
-        {
-          "date": "2026-08-25",
           "type": "funding",
-          "detail": "Raised $150M Series A at $1.05B, co-led by Energize and DCVC; NVIDIA, Siemens, RWE, GE Vernova among investors; 12 Fortune 500 companies hold stakes",
-          "source_url": "https://venturebeat.com/business/emerald-ai-raises-150-million-series-a-at-105-billion-valuation-to-scale-power-flexible-ai-data-centers/"
-        },
-        {
-          "date": "2026-08-25",
-          "type": "traction",
-          "detail": "Software deployed commercially at multi-megawatt data center scale; five global demonstrations completed",
-          "source_url": "https://thenextweb.com/news/emerald-ai-150m-funding-data-centre-grid-flexibility"
-        }
-      ]
-    },
-    {
-      "company": "Euno",
-      "url": "https://euno.ai",
-      "first_seen_utc": "2026-09-22T00:00:00+00:00",
-      "status": "reported",
-      "score": 52,
-      "tier": "$100K+",
-      "summary": "Enterprise AI context platform \u2014 gives AI agents organizational intelligence to navigate enterprise data. Fortune 500 customers, $23M Series A.",
-      "do_fit": "Kubernetes, Managed Databases, GPU Droplets. Enterprise data context platform needs scalable storage and compute \u2014 DO Managed Databases for the context graph, GPU Droplets for LLM-based context inference.",
-      "angle": "Your context platform makes enterprise AI trustworthy. DO Managed Databases for the continuous context learning pipeline \u2014 we're already trusted by startups and mid-market enterprises scaling their AI.",
-      "jev": {
-        "tier": "1m_plus",
-        "confidence": 0.69
-      },
-      "signals": [
-        {
-          "date": "2026-09-09",
-          "type": "traction",
-          "detail": "Fortune 500 clients deploying AI into production within weeks using Euno context platform",
-          "source_url": "https://euno.ai/blog/euno-raises-series-a"
-        },
-        {
-          "date": "2026-09-09",
-          "type": "funding",
-          "detail": "Raised $23M Series A led by N47; total $29M; Wiz, Cyera, Eon, Tavily founders as angels",
-          "source_url": "https://www.prnewswire.com/news-releases/euno-raises-23-million-series-a-to-build-the-ai-context-brain-for-the-enterprise-302872947.html"
+          "detail": "Raised $35M Series A led by M13; Torch Capital, Picus Ventures, Afore Capital participated",
+          "source_url": "https://www.prnewswire.com/news-releases/baselayer-raises-35m-series-a-led-by-m13-launches-identity-infrastructure-for-ai-agents-302885670.html"
         }
       ]
     },
@@ -2082,15 +2520,15 @@
       "signals": [
         {
           "date": "2026-09-16",
-          "type": "funding",
-          "detail": "Raised $5.3M seed led by Crane Venture Partners; YC Spring 2026; angels include former DeepMind researchers",
-          "source_url": "https://www.globenewswire.com/news-release/2026/09/16/3363199/0/en/expanse-raises-5-3-million-to-eliminate-guesswork-from-ai-computing.html"
-        },
-        {
-          "date": "2026-09-16",
           "type": "product",
           "detail": "Identified nearly $8M of idle compute in a single cluster in one month; ~30% of cloud spend lost to over-allocation",
           "source_url": "https://expanse.sh/blog/expanse-raises-5-3m-seed"
+        },
+        {
+          "date": "2026-09-16",
+          "type": "funding",
+          "detail": "Raised $5.3M seed led by Crane Venture Partners; YC Spring 2026; angels include former DeepMind researchers",
+          "source_url": "https://www.globenewswire.com/news-release/2026/09/16/3363199/0/en/expanse-raises-5-3-million-to-eliminate-guesswork-from-ai-computing.html"
         }
       ]
     },
@@ -2118,41 +2556,6 @@
       ]
     },
     {
-      "company": "Comp AI",
-      "url": "https://trycomp.ai",
-      "first_seen_utc": "2026-09-22T00:00:00+00:00",
-      "status": "reported",
-      "score": 48,
-      "tier": "$100K+",
-      "summary": "AI-native compliance and security platform; 1,000+ customers, 15x ARR growth. Expanding from compliance into continuous cybersecurity.",
-      "do_fit": "Kubernetes, Managed Databases. Compliance and security automation platform \u2014 DO as a recommended deployment for customers needing compliant cloud infrastructure.",
-      "angle": "Your customers need compliant infrastructure to run on. DO is SOC 2, ISO 27001 certified \u2014 we can be the recommended cloud for Comp AI customers who need to move fast on compliance.",
-      "jev": {
-        "tier": "1m_plus",
-        "confidence": 0.58
-      },
-      "signals": [
-        {
-          "date": "2026-09-17",
-          "type": "strategy",
-          "detail": "Expanding from compliance automation into continuous agentic cybersecurity; eyes continuously agentic future for security",
-          "source_url": "https://techcrunch.com/2026/09/17/comp-ai-sets-eyes-on-a-continiously-agentic-future-for-security-and-complaince/"
-        },
-        {
-          "date": "2026-09-17",
-          "type": "traction",
-          "detail": "15x ARR growth YoY; customers include Corgi, Dub, OpenCode, Inference, Primer; helps companies become compliant in days, not quarters",
-          "source_url": "https://www.trycomp.ai/press/series-a"
-        },
-        {
-          "date": "2026-09-17",
-          "type": "funding",
-          "detail": "Raised $34M Series A led by Roo Capital and Grand Ventures; 1,000+ customers across healthcare, financial services, higher ed, software",
-          "source_url": "https://www.trycomp.ai/press/series-a"
-        }
-      ]
-    },
-    {
       "company": "Visko",
       "url": "https://visko.ai",
       "first_seen_utc": "2026-09-22T00:00:00+00:00",
@@ -2169,14 +2572,14 @@
       "signals": [
         {
           "date": "2026-09-01",
-          "type": "funding",
-          "detail": "Raised $10M pre-seed from Llama Ventures; launched Orbis, its first live model for continuous AI video generation",
+          "type": "product",
+          "detail": "Orbis generates continuous, real-time, interactive visual worlds; fundamentally different architecture from query-based models like Sora",
           "source_url": "https://siliconangle.com/2026/09/01/after-raising-10m-in-funding-visko-debuts-orbis-its-first-live-model-for-generating-longform-videos/"
         },
         {
           "date": "2026-09-01",
-          "type": "product",
-          "detail": "Orbis generates continuous, real-time, interactive visual worlds; fundamentally different architecture from query-based models like Sora",
+          "type": "funding",
+          "detail": "Raised $10M pre-seed from Llama Ventures; launched Orbis, its first live model for continuous AI video generation",
           "source_url": "https://siliconangle.com/2026/09/01/after-raising-10m-in-funding-visko-debuts-orbis-its-first-live-model-for-generating-longform-videos/"
         }
       ]
@@ -2198,14 +2601,14 @@
       "signals": [
         {
           "date": "2026-08-06",
-          "type": "funding",
-          "detail": "Raised $28.5M Series A led by Nexus Venture Partners; total ~$32M; ARR in low tens of millions, growing ~10x in 6 months",
+          "type": "traction",
+          "detail": "30,000+ developers signed up; building agent identities, financial tools, email, phone numbers, servers and company formation orchestration",
           "source_url": "https://aitribune.net/whats-the-hype-about-naive/"
         },
         {
           "date": "2026-08-06",
-          "type": "traction",
-          "detail": "30,000+ developers signed up; building agent identities, financial tools, email, phone numbers, servers and company formation orchestration",
+          "type": "funding",
+          "detail": "Raised $28.5M Series A led by Nexus Venture Partners; total ~$32M; ARR in low tens of millions, growing ~10x in 6 months",
           "source_url": "https://aitribune.net/whats-the-hype-about-naive/"
         }
       ]
